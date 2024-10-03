@@ -236,40 +236,55 @@
     </body>
     <script type="application/ld+json">
         {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Steven Hay",
-          "url": "https://stvhay.github.io",
-          "jobTitle": "Engineer",
-          "description": "Multidisciplinary engineer specializing in AI, energy storage, and nuclear power.",
-          "sameAs": [
-            "https://www.linkedin.com/in/steve-hay-8763636b"
-          ],
-          "knowsAbout": ["AI", "Data Science", "Energy Storage", "Nuclear Power", "Software Engineering"],
-          
-          "creatorOf": [
-            {
-              "@type": "CreativeWork",
-              "name": "Using Augmented Reality to Experience Prosopagnosia",
-              "url": "https://stvhay.github.io/experience-prosopagnosia.pdf",
-              "description": "A project that simulates the subjective experience of face blindness using augmented reality technology.",
-              "image": "https://stvhay.github.io/images/ar-prosopagnosia.pdf"
-            },
-            {
-              "@type": "CreativeWork",
-              "name": "Photography Portfolio",
-              "url": "https://www.flickr.com/photos/stevehay/albums/72157617300571643",
-              "description": "A collection of photographs published in various publications including the Washington Post and Washington City Paper.",
-              "image": "https://stvhay.github.io/images/photography.jpeg"
-            },
-            {
-              "@type": "CreativeWork",
-              "name": "Batocera Linux Contributions",
-              "url": "https://batocera.org",
-              "description": "Contributions to the Batocera Linux project, focusing on retrogaming platforms and ARM boards.",
-              "image": "https://stvhay.github.io/images/batocera.jpeg"
-            }
-          ]
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Person",
+                    "name": "Steven Hay",
+                    "url": "https://stvhay.github.io",
+                    "jobTitle": "Engineer",
+                    "description": "Multidisciplinary engineer specializing in AI, energy storage, and nuclear power.",
+                    "sameAs": [
+                        "https://www.linkedin.com/in/steve-hay-8763636b"
+                    ],
+                    "knowsAbout": ["AI", "Data Science", "Energy Storage", "Nuclear Power", "Software Engineering"]
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Using Augmented Reality to Experience Prosopagnosia",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Steven Hay"
+                    },
+                    "url": "https://stvhay.github.io/experience-prosopagnosia.pdf",
+                    "description": "A project that simulates the subjective experience of face blindness using augmented reality technology.",
+                    "image": "https://stvhay.github.io/images/ar-prosopagnosia.pdf"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "CreativeWork",
+                    "name": "Photography Portfolio",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Steven Hay"
+                    },
+                    "url": "https://www.flickr.com/photos/stevehay/albums/72157617300571643",
+                    "description": "A collection of photographs published in various publications including the Washington Post and Washington City Paper.",
+                    "image": "https://stvhay.github.io/images/photography.jpeg"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "CreativeWork",
+                    "name": "Batocera Linux Contributions",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Steven Hay"
+                    },
+                    "url": "https://batocera.org",
+                    "description": "Contributions to the Batocera Linux project, focusing on retrogaming platforms and ARM boards.",
+                    "image": "https://stvhay.github.io/images/batocera.jpeg"
+                }
+            ]
         }
     </script>        
 </html>
