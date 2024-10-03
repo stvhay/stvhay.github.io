@@ -1,4 +1,4 @@
-            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+            /*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');*/
 
             * {
                 margin: 0;
@@ -6,11 +6,52 @@
                 box-sizing: border-box;
             }
 
+            @font-face {
+                font-family: 'Latin Modern';
+                font-style: normal;
+                font-weight: normal;
+                font-display: swap;
+                src: url('./fonts/LM-regular.woff2') format('woff2'),
+                  url('./fonts/LM-regular.woff') format('woff'),
+                  url('./fonts/LM-regular.ttf') format('truetype');
+              }
+              
+              @font-face {
+                font-family: 'Latin Modern';
+                font-style: italic;
+                font-weight: normal;
+                font-display: swap;
+                src: url('./fonts/LM-italic.woff2') format('woff2'),
+                  url('./fonts/LM-italic.woff') format('woff'),
+                  url('./fonts/LM-italic.ttf') format('truetype');
+              }
+              
+              @font-face {
+                font-family: 'Latin Modern';
+                font-style: normal;
+                font-weight: bold;
+                font-display: swap;
+                src: url('./fonts/LM-bold.woff2') format('woff2'),
+                  url('./fonts/LM-bold.woff') format('woff'),
+                  url('./fonts/LM-bold.ttf') format('truetype');
+              }
+              
+              @font-face {
+                font-family: 'Latin Modern';
+                font-style: italic;
+                font-weight: bold;
+                font-display: swap;
+                src: url('./fonts/LM-bold-italic.woff2') format('woff2'),
+                  url('./fonts/LM-bold-italic.woff') format('woff'),
+                  url('./fonts/LM-bold-italic.ttf') format('truetype');
+              }              
+
             body {
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Latin Modern', sans-serif;
                 background-color: #e9ecef;
                 color: #343a40;
-                line-height: 1.6;
+                line-height: 1.8;
+                text-rendering: optimizeLegibility;
             }
 
             header,
@@ -43,7 +84,7 @@
             }
 
             .container {
-                max-width: 1100px;
+                max-width: 100ch;
                 margin: auto;
                 background: #ffffff;
                 padding: 20px;
