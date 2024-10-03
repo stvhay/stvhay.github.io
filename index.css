@@ -125,11 +125,11 @@
                 }
 
                 .portfolio-img {
-                    margin-bottom: 20px; /* Add some space below the image */
+                    margin-bottom: 20px;
                 }
 
                 .portfolio-text {
-                    text-align: left; /* Align text back to the left if needed */
+                    text-align: left;
                 }
             }
 
