@@ -57,16 +57,28 @@ body {
 }
 
 header,
+nav,
 footer {
-    background-color: #212529;
+    background-color: black;
     color: #f8f9fa;
-    padding: 1.5rem 0;
     text-align: center;
+}
+
+header {
+    position: relative;
+    height: 5rem;
 }
 
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+}
+
+nav {
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000;
+    padding: 0.5rem 0;
 }
 
 nav a {
@@ -186,6 +198,10 @@ a {
 
 a:hover {
     color: #0056b3;
+}
+
+footer {
+    padding: 0.5rem 0;
 }
 
 footer p {
