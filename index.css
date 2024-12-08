@@ -119,6 +119,9 @@ p {
     margin-bottom: 1.5rem;
 }
 
+ul {
+    margin-left: 2em;
+}
 .portfolio-item {
     display: grid;
     grid-template-columns: 150px 1fr;

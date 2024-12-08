@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scream Tracker 3.21</title>
+    <link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css">
+    <script src="https://v8.js-dos.com/latest/js-dos.js"></script>
+
+</head>
+<body>
+    <h1>Scream Tracker 3</h1>
+    <div id="dos" style="width: 100vw; height: 60vw;"></div>
+    <script>
+        Dos(document.getElementById("dos"), {
+            url: "music.jsdos",
+        });
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scream Tracker 3 Emulator</title>
+</head>
+<body>
+    <h1>Scream Tracker 3 Emulator</h1>
+    <div id="jsdos" style="width: 640px; height: 400px;"></div>
+    <script>
+        Dos(document.getElementById("jsdos"), { wdosboxUrl: "https://cdn.jsdelivr.net/npm/js-dos/dist/wdosbox.js" }).ready((fs, main) => {
+            fs.extract("scrmt321.zip").then(() => main(["ST3.EXE"]));
+        });
+    </script>
+</body>
+</html>
