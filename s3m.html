@@ -15,6 +15,9 @@
     <script>
         Dos(document.getElementById("dos"), {
             url: "music.jsdos",
+            autoStart: true,
+            kiosk: true,
+            noCloud: true,
         }).ready((fs, main) => {
             main(['ST3.EXE']);
         });
