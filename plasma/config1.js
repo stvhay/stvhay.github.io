@@ -14,10 +14,10 @@ function config1() {
         // SCALES[1]: Vertical wave density: Smaller values, tighter ripples
         // SCALES[2]: Diagonal wave density: Smaller values, finer diagonal patterns
         // SCALES[3]: Radial wave density
-        SCALES: [10.6, 20.4, 5.8, 2.9],
-        SPEEDS: [-0.72, -1.28], // Time multipliers for wave progression
+        SCALES: [10.6, 5.4, 10.8, 3.9],
+        SPEEDS: [-0.72, -1.28, 1.5, 2], // Time multipliers for wave progression
         PHASE_OFFSET: Math.PI / 2.1, // Phase shift between lines
-        COLOR_MODE: "grayscale", // 'hsv' or 'grayscale'
+        COLOR_MODE: "hsv", // 'hsv' or 'grayscale'
         HSV: {
           SATURATION: 85, // 0-100% color intensity
           BRIGHTNESS: 65, // Base brightness (0-100)
@@ -33,14 +33,14 @@ function config1() {
         },
       },
       ODD_LINE: {
-        SCALES: [50.2, 10.0, -15.4, -9.0],
-        SPEEDS: [2.37, 3.76],
-        PHASE_OFFSET: Math.PI / 1.8,
+        SCALES: [5.2, 10.0, 15.4, 9.0],
+        SPEEDS: [1.37, 0.76, 0.56, 2.1],
+        PHASE_OFFSET: Math.PI / 1.7,
         COLOR_MODE: "hsv",
         HSV: {
           SATURATION: 85,
           BRIGHTNESS: 65,
-          BRIGHTNESS_VAR: 55,
+          BRIGHTNESS_VAR: 25,
           HUE_CYCLE_SPEED: 0.25,
         },
         GRAYSCALE: {

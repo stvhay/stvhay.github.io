@@ -2,15 +2,34 @@
 <html>
   <head>
     <title>Plasma</title>
+    <style>
+      /* Center the div and set its width to 100 characters */
+      .canvas-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120ch; /* Set width to 100 characters */
+        margin: 0 auto; /* Center horizontally */
+      }
+
+      /* Ensure the canvas fills the container */
+      .canvas-container canvas {
+        display: block;
+        width: 80ch;
+        height: 30ch;
+        image-rendering: pixelated;
+      }
+    </style>
   </head>
   <body>
-    <canvas id="plasma"></canvas>
+    <div class="canvas-container">
+      <canvas id="plasma"></canvas>
+    </div>
+
     <script src="config1.js"></script>
     <script src="plasma.js"></script>
     <script>
       const canvas = document.getElementById("plasma");
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
       startPlasma(canvas, config1);
     </script>
   </body>
