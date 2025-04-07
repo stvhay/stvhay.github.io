@@ -7,6 +7,14 @@ let imgData, rawImgData; // Declare these globally for reuse
 let startTime = performance.now();
 let frameCount = 0;
 
+const SIN = new Float64Array(
+  Array.from({ length: 1024 }, (_, i) => Math.sin((i * 2 * Math.PI) / 1024)),
+);
+function fastSIN(a) {
+  const lu = ((((512 / Math.PI) * a) % 1024 | 0) + 1024) % 1024;
+  return SIN[lu];
+}
+
 function HSVtoRGB(h, s, v) {
   h /= 60; // Sector 0-5
   s /= 100;
@@ -29,7 +37,7 @@ function HSVtoRGB(h, s, v) {
               ? [t, p, v]
               : [v, p, q];
 
-  return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255), 255];
+  return [(r * 256) | 0, (g * 256) | 0, (b * 256) | 0, 255];
 }
 
 function render() {
@@ -47,10 +55,10 @@ function render() {
       const value =
         PLASMA_CONFIG.WAVE_OFFSET +
         PLASMA_CONFIG.WAVE_AMPLITUDE *
-          (Math.sin(zx / params.SCALES[0] + time * params.SPEEDS[0]) +
-            Math.sin(zy / params.SCALES[1] + time * params.SPEEDS[1]) +
-            Math.sin((zx + zy) / params.SCALES[2] + time * params.SPEEDS[2]) +
-            Math.sin(
+          (fastSIN(zx / params.SCALES[0] + time * params.SPEEDS[0]) +
+            fastSIN(zy / params.SCALES[1] + time * params.SPEEDS[1]) +
+            fastSIN((zx + zy) / params.SCALES[2] + time * params.SPEEDS[2]) +
+            fastSIN(
               Math.hypot(zx, zy) / params.SCALES[3] - time * params.SPEEDS[3],
             ));
 
@@ -73,7 +81,7 @@ function render() {
         // HSV color conversion
         const hue = (value + time * params.HSV.HUE_CYCLE_SPEED * 100) % 360;
         const brightness =
-          params.HSV.BRIGHTNESS + Math.sin(time) * params.HSV.BRIGHTNESS_VAR;
+          params.HSV.BRIGHTNESS + fastSIN(time) * params.HSV.BRIGHTNESS_VAR;
         const rgb = HSVtoRGB(hue, params.HSV.SATURATION, brightness);
         rawImgData[idx] = rgb[0];
         rawImgData[idx + 1] = rgb[1];
@@ -92,7 +100,7 @@ function render() {
   time += PLASMA_CONFIG.BASE_SPEED;
 
   frameCount++;
-  if (frameCount % 50 == 0) {
+  if (frameCount % 100 == 0) {
     newTime = performance.now();
     console.log("FPS: " + (1000 * frameCount) / (newTime - startTime));
     frameCount = 0;
