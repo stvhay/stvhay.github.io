@@ -34,7 +34,7 @@
       <link>https://stevenhay.com/portfolio/digital-music/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://stevenhay.com/portfolio/digital-music/</guid>
-      <description>&lt;h3 id=&#34;scream-tracker-3-music-16-bit8-channel&#34;&gt;Scream Tracker 3 Music (16-bit/8-channel)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a &#xA;    href=&#34;Fn-fbeat.mp3&#34;&#xA;    &#xA;     target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Feel the Beat&lt;/a&gt; (mp3): Made for a PC Demo (5 track)&lt;/li&gt;&#xA;&lt;li&gt;&lt;a &#xA;    href=&#34;Neagle.mp3&#34;&#xA;    &#xA;     target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;The Eagle&lt;/a&gt; (mp3): Experimenting with time signatures on the tracker (8 track)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;em&gt;Click &lt;a &#xA;    href=&#34;https://stevenhay.com/s3m/it.html&#34;&#xA;    &#xA;     target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;here&lt;/a&gt; to play in emulated hardware.&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;scream-tracker-3-music-16-bit8-channel&#34;&gt;Scream Tracker 3 Music (16-bit/8-channel)&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a &#xA;    href=&#34;https://stevenhay.com/s3m/Fn-fbeat.mp3&#34;&#xA;    &#xA;    &gt;Feel the Beat&lt;/a&gt; (mp3): Made for a PC Demo (5 track)&lt;/li&gt;&#xA;&lt;li&gt;&lt;a &#xA;    href=&#34;https://stevenhay.com/s3m/Neagle.mp3&#34;&#xA;    &#xA;    &gt;The Eagle&lt;/a&gt; (mp3): Experimenting with time signatures on the tracker (8 track)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;a &#xA;    href=&#34;https://stevenhay.com/s3m/it.html&#34;&#xA;    &#xA;     target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Play in emulated hardware&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Batocera Linux</title>
@@ -48,7 +48,7 @@
       <link>https://stevenhay.com/portfolio/javascript-psychometric-quiz-template/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://stevenhay.com/portfolio/javascript-psychometric-quiz-template/</guid>
-      <description>&lt;p&gt;This is a browser Javascript template to administer and score an online user&#xA;&amp;ldquo;quiz&amp;rdquo;. The code supports multi-dimensional tests, with the ability to sum up&#xA;scores across the dimensions and establish minimum and maximum criteria for&#xA;each.&lt;/p&gt;&#xA;&lt;p&gt;Sample quizzes are provided for aphantasia (VVIQ) and personality (OCEAN)&#xA;tests. The VVIQ test is online &lt;a &#xA;    href=&#34;https://www.sadied.com/viv-q&#34;&#xA;    &#xA;     target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is a browser Javascript template to administer and score an online user&#xA;&amp;ldquo;quiz&amp;rdquo;. The code supports multi-dimensional tests, with the ability to sum up&#xA;scores across the dimensions and establish minimum and maximum criteria for&#xA;each.&lt;/p&gt;&#xA;&lt;p&gt;Sample quizzes are provided for aphantasia (VVIQ) and personality (OCEAN)&#xA;tests. &lt;a &#xA;    href=&#34;https://www.sadied.com/viv-q&#34;&#xA;    &#xA;     target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Try the VVIQ test online&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>MAC Address Scanner</title>
@@ -86,11 +86,11 @@
       <description>&lt;p&gt;&lt;em&gt;Do we live in a world of ideas?&lt;/em&gt; &amp;#x1f4a1;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Contact</title>
+      <title>Contact Steven Hay</title>
       <link>https://stevenhay.com/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://stevenhay.com/contact/</guid>
-      <description>&lt;p&gt;You can reach me via &lt;a &#xA;    href=&#34;mailto:me@firstnamelastname.com&#34;&#xA;    &#xA;    &gt;email&lt;/a&gt; or connect with&#xA;me on &lt;a &#xA;    href=&#34;https://www.linkedin.com/in/steve-hay-8763636b&#34;&#xA;    &#xA;     target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;LinkedIn&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;m always interested in hearing from people working on interesting problems in computational neuroscience, machine learning, and systems engineering.&lt;/p&gt;&#xA;&lt;p&gt;Whether you&amp;rsquo;d like to discuss research, collaborate on a project, or just say hello, feel free to reach out.&lt;/p&gt;&#xA;&lt;p&gt;You can contact me via &lt;a &#xA;    href=&#34;mailto:me@firstnamelastname.com&#34;&#xA;    &#xA;    &gt;email&lt;/a&gt; or connect with me on &lt;a &#xA;    href=&#34;https://www.linkedin.com/in/steve-hay-8763636b&#34;&#xA;    &#xA;     target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;LinkedIn&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
