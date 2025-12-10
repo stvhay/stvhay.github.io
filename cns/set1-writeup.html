@@ -2237,6 +2237,7 @@
                   for (
                     var t = e.state, n = e.collection, r = !1, o = 0, i = 0;
                     !1 === r;
+
                   ) {
                     var u = t.collections[o];
                     if (u === n) {
@@ -7616,6 +7617,7 @@
                               var e = [],
                                 t = [{ nestedArrIndex: -1, value: o }];
                               t.length;
+
                             ) {
                               var c = t.pop(),
                                 a = c.nestedArrIndex,
@@ -7830,6 +7832,7 @@
                                 S = d > 1 || g,
                                 _ = S ? Array(M) : [];
                               (m = e.indexOf(t, L)) > -1;
+
                             ) {
                               var O = R(t, {
                                 currentLocation: m,
@@ -8339,6 +8342,7 @@
                         for (
                           var t, n = 0, r = [], i = this.pattern.length;
                           (t = e.indexOf(this.pattern, n)) > -1;
+
                         )
                           ((n = t + i), r.push([t, n - 1]));
                         var o = !!r.length;
@@ -10449,6 +10453,7 @@
           for (
             var n = t(e), i = j(e);
             i && O(i) && "static" === m(i).position;
+
           )
             i = j(i);
           return i &&
@@ -10463,6 +10468,7 @@
                   for (
                     o(n) && (n = n.host);
                     r(n) && ["html", "body"].indexOf(l(n)) < 0;
+
                   ) {
                     var i = m(n);
                     if (
@@ -13306,6 +13312,7 @@
                         (n = t.indexOf((r = void 0 !== n ? a + "-" + s : r))),
                           (s += 1),
                           -1 !== n;
+
                       );
                       ((n = void 0),
                         t.push(r),
@@ -14802,6 +14809,7 @@
           for (
             var e = fe(t), i = De(t);
             i && ke(i) && "static" === xe(i).position;
+
           )
             i = De(i);
           return i &&
@@ -14821,6 +14829,7 @@
                   for (
                     ge(i) && (i = i.host);
                     me(i) && ["html", "body"].indexOf(ue(i)) < 0;
+
                   ) {
                     var n = xe(i);
                     if (
@@ -24488,6 +24497,7 @@
                         ? ((b = -1), (s = s + g - 1), (h = h + g - 1))
                         : (b = 1);
                       g > 0;
+
                     )
                       (n._setter(h, n._getter(s)),
                         (s += b),
@@ -24548,6 +24558,7 @@
                     for (
                       var u = arguments.length > 1 ? arguments[1] : B, a = 0;
                       a < i;
+
                     ) {
                       var h = e._getter(a),
                         y = t.call(u, h, a, e);
@@ -24566,6 +24577,7 @@
                     for (
                       var u = arguments.length > 1 ? arguments[1] : B, a = 0;
                       a < i;
+
                     ) {
                       var h = e._getter(a),
                         y = t.call(u, h, a, e);
@@ -24669,6 +24681,7 @@
                     for (
                       o = arguments.length >= 2 ? arguments[1] : e._getter(i++);
                       i < r;
+
                     )
                       ((o = t.call(B, o, e._getter(i), i, e)), i++);
                     return o;
@@ -24686,6 +24699,7 @@
                     for (
                       o = arguments.length >= 2 ? arguments[1] : e._getter(i--);
                       i >= 0;
+
                     )
                       ((o = t.call(B, o, e._getter(i), i, e)), i--);
                     return o;
@@ -24779,6 +24793,7 @@
                         c = new p(l),
                         b = 0;
                       h < s;
+
                     ) {
                       var g = r._getter(h);
                       (c._setter(b, g), ++h, ++b);
@@ -25881,6 +25896,7 @@
                 ? ((s = -1), (M = M + d - 1), (h = h + d - 1))
                 : (s = 1);
               d > 0;
+
             ) {
               var f = String(M),
                 g = String(h);
@@ -25960,6 +25976,7 @@
                 g = n === undefined ? a : ToInteger(n),
                 M = g < 0 ? Math.max(a + g, 0) : Math.min(g, a);
               i < M;
+
             ) {
               ((o[ToString(i)] = e), (i += 1));
             }
@@ -25975,6 +25992,7 @@
             for (
               var o = arguments.length > 1 ? arguments[1] : undefined, a = 0;
               a < n;
+
             ) {
               var i = ToString(a),
                 f = Get(t, i);
@@ -25993,6 +26011,7 @@
             for (
               var o = arguments.length > 1 ? arguments[1] : undefined, a = 0;
               a < n;
+
             ) {
               var i = ToString(a),
                 l = Get(t, i);
@@ -26012,6 +26031,7 @@
             for (
               var a = arguments.length > 1 ? arguments[1] : undefined, i = 0;
               i < o;
+
             ) {
               var f = ToString(i);
               if (HasProperty(n, f)) {
@@ -26416,6 +26436,7 @@
                 i = 0,
                 l = 0;
               i < o;
+
             ) {
               var f = ToString(i);
               if (HasProperty(t, f)) {
@@ -26439,6 +26460,7 @@
                 n = ArraySpeciesCreate(t, a),
                 i = 0;
               i < a;
+
             ) {
               var p = ToString(i);
               if (HasProperty(t, p)) {
@@ -27709,6 +27731,7 @@
                 f = IsConstructor(o) ? Construct(o, [d]) : ArrayCreate(d),
                   s = 0;
                 s < d;
+
               ) {
                 y = ToString(s);
                 var I = Get(v, y);
@@ -27885,6 +27908,7 @@
                     n._v = e,
                     t === O && (I && o(e) && (e.longStack = w(e, n)), on(n));
                   r < i;
+
                 )
                   rn(n, n[r++]);
               return n;
@@ -28499,6 +28523,7 @@
             for (
               var t = [], e = arguments, n = arguments.length, a = [], i = 0;
               i < n;
+
             ) {
               a = [];
               var l = e[i],

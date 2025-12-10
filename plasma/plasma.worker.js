@@ -11,7 +11,7 @@ const SIN = new Float64Array(
   Array.from({ length: 1024 }, (_, i) => Math.sin((i * 2 * Math.PI) / 1024)),
 );
 function fastSIN(a) {
-  const lu = (((((512 / Math.PI) * a) % 1024) | 0) + 1024) % 1024;
+  const lu = ((((512 / Math.PI) * a) % 1024 | 0) + 1024) % 1024;
   return SIN[lu];
 }
 
