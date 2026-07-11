@@ -113,10 +113,15 @@
       });
   }
 
-  // Initialize when DOM is ready
-  if (document.readyState === "loading") {
+  // The <script> tag is placed in footer.html immediately after the
+  // toggle button, so the button is already in the DOM by the time
+  // this script runs. Initializing synchronously here lets us set the
+  // precise label before paint, avoiding a flash of the neutral
+  // fallback "Toggle theme" text. If the script is ever moved earlier,
+  // initThemeToggle's guard (no button → return) keeps it safe and the
+  // DOMContentLoaded path below will catch the late attachment.
+  initThemeToggle();
+  if (!document.getElementById("theme-toggle")) {
     document.addEventListener("DOMContentLoaded", initThemeToggle);
-  } else {
-    initThemeToggle();
   }
 })();

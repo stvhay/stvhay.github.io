@@ -44,7 +44,7 @@
 
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' https://stvhay.github.io;"
+      content="default-src 'self'; script-src 'self';"
     />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -52,35 +52,40 @@
     <title>Portfolio | Steven Hay</title>
     <link
       rel="stylesheet"
-      href="/css/main.min.47840189503e1aec20d37fbdebefdc2a169301b2bebc543ddf3130604ff1abe7.css"
-      integrity="sha256-R4QBiVA&#43;Guwg03&#43;96&#43;/cKhaTAbK&#43;vFQ93zEwYE/xq&#43;c="
+      href="/css/main.min.0f69feac92fa02595a54a4694bff2ad1cb0c4ffb0d82ea8c664707d0cbd3c40e.css"
+      integrity="sha256-D2n&#43;rJL6AllaVKRpS/8q0csMT/sNguqMZkcH0MvTxA4="
       crossorigin="anonymous"
     />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
-      <div class="site-title">Steven Hay</div>
+      <a class="site-title" href="/">Steven Hay</a>
     </header>
     <nav>
       <a href="/">Home</a>
-      <a href="/docs/cv/cv-steve-hay.pdf" target="_blank">CV</a>
+      <a
+        href="/docs/cv/cv-steve-hay.pdf"
+        rel="noopener noreferrer"
+        target="_blank"
+        >CV</a
+      >
       <a aria-current="page" class="active" href="/portfolio/">Portfolio</a>
       <a href="/writing/">Writing</a>
       <a href="/contact/">Contact</a>
     </nav>
-    <main>
-      <section id="Portfolio" class="container">
-        <h1 class="sr-only">Portfolio</h1>
+    <main id="main-content" tabindex="-1">
+      <section id="portfolio" class="container">
+        <h1>Portfolio</h1>
 
         <article class="post card">
           <div class="post-img">
-            <div class="post-img">
-              <img
-                src="/portfolio/using-augmented-reality-to-experience-prosopagnosia/img.webp"
-                alt="Using Augmented Reality to Experience Prosopagnosia"
-              />
-            </div>
+            <img
+              src="/portfolio/using-augmented-reality-to-experience-prosopagnosia/img.webp"
+              alt="Using Augmented Reality to Experience Prosopagnosia"
+            />
           </div>
+
           <div class="post-text">
             <h2>
               <a
@@ -88,24 +93,10 @@
                 >Using Augmented Reality to Experience Prosopagnosia</a
               >
             </h2>
-            <i> </i>
-            <br />
+
             <p>
-              This project aims to let people see through another&rsquo;s eyes.
-              We will simulate the subjective experience of face blindness
-              (prosopagnosia) through augmented reality (AR) manipulation of
-              facial features. Informed by research on neural encoding in the
-              fusiform face area, the system captures live video input and
-              distorts faces by altering their geometry and texture. The aim of
-              the project is to accurately simulate the subjective experience of
-              someone with prosopagnosia, allowing for an immersive exploration
-              of how disrupted facial recognition impacts perception and social
-              interaction. By merging neuroscience insights with AR technology,
-              this work contributes to both the artistic exploration and
-              scientific understanding of face perception disorders. (<a
-                href="/docs/experience-prosopagnosia/experience-prosopagnosia.pdf"
-                >white paper</a
-              >)
+              AR system simulating face blindness by distorting facial features
+              in real-time, based on neuroscience research on face perception.
             </p>
             <span class="section-mark">(portfolio)</span>
           </div>
@@ -113,14 +104,12 @@
 
         <article class="post card">
           <div class="post-img">
-            <div class="post-img">
-              <img src="/portfolio/photography/img.jpeg" alt="Photography" />
-            </div>
+            <img src="/portfolio/photography/img.jpeg" alt="Photography" />
           </div>
+
           <div class="post-text">
             <h2><a href="/portfolio/photography/">Photography</a></h2>
-            <i> </i>
-            <br />
+
             <p>
               I&rsquo;ve taken various photographs over the years, some
               published for the Washington Post, Washington City Paper, and
@@ -137,39 +126,15 @@
 
         <article class="post card">
           <div class="post-img">
-            <div class="post-img">
-              <img
-                src="/portfolio/digital-music/img.jpeg"
-                alt="Digital Music"
-              />
-            </div>
+            <img src="/portfolio/digital-music/img.jpeg" alt="Digital Music" />
           </div>
+
           <div class="post-text">
             <h2><a href="/portfolio/digital-music/">Digital Music</a></h2>
-            <i> </i>
-            <br />
-            <h2 id="scream-tracker-3-music-16-bit8-channel">
-              Scream Tracker 3 Music (16-bit/8-channel)
-            </h2>
-            <ul>
-              <li>
-                <a href="/s3m/Fn-fbeat.mp3">Feel the Beat</a> (mp3): Made for a
-                PC Demo (5 track)
-              </li>
-              <li>
-                <a href="/s3m/Neagle.mp3">The Eagle</a> (mp3): Experimenting
-                with time signatures on the tracker (8 track)
-              </li>
-            </ul>
+
             <p>
-              <em
-                ><a
-                  href="/s3m/it.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Play in emulated hardware</a
-                ></em
-              >
+              16-bit Scream Tracker 3 music compositions created for PC demos,
+              playable in emulated hardware.
             </p>
             <span class="section-mark">(portfolio)</span>
           </div>
@@ -177,56 +142,18 @@
 
         <article class="post card">
           <div class="post-img">
-            <div class="post-img">
-              <img
-                src="/portfolio/batocera-linux/img.jpeg"
-                alt="Batocera Linux"
-              />
-            </div>
+            <img
+              src="/portfolio/batocera-linux/img.jpeg"
+              alt="Batocera Linux"
+            />
           </div>
+
           <div class="post-text">
             <h2><a href="/portfolio/batocera-linux/">Batocera Linux</a></h2>
-            <i> </i>
-            <br />
+
             <p>
-              I wanted to make a retrogaming platform for my nephews, and this
-              project turned into me briefly maintaining a fork of the Linux
-              <a
-                href="https://github.com/stvhay/kernel"
-                target="_blank"
-                rel="noopener noreferrer"
-                >kernel</a
-              >
-              for the Batocera project, as well as user contributions to the
-              <a
-                href="https://github.com/stvhay/armbian-indiedroid-nova"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Armbian</a
-              >
-              project and more minimal
-              <a
-                href="https://github.com/stvhay/debian-image-builder"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Deb Image Builder</a
-              >
-              project. My work was focused on ARM boards with the RK3588(S)
-              chipset, such as the
-              <a
-                href="https://radxa.com/products/rock5/5b/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Rock 5B</a
-              >
-              and
-              <a
-                href="https://indiedroid.us"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Indiedroid Nova</a
-              >. I also managed to get a cool patch into the underlying
-              buildroot tool to bidirectionally graph package dependencies.
+              Linux kernel and embedded systems work for retrogaming platform,
+              focusing on ARM boards with RK3588 chipsets.
             </p>
             <span class="section-mark">(portfolio)</span>
           </div>
@@ -234,37 +161,22 @@
 
         <article class="post card">
           <div class="post-img">
-            <div class="post-img">
-              <img
-                src="/portfolio/javascript-psychometric-quiz-template/img.jpeg"
-                alt="Javascript Psychometric Quiz Template"
-              />
-            </div>
+            <img
+              src="/portfolio/javascript-psychometric-quiz-template/img.jpeg"
+              alt="Javascript Psychometric Quiz Template"
+            />
           </div>
+
           <div class="post-text">
             <h2>
               <a href="/portfolio/javascript-psychometric-quiz-template/"
                 >Javascript Psychometric Quiz Template</a
               >
             </h2>
-            <i> </i>
-            <br />
+
             <p>
-              This is a browser Javascript template to administer and score an
-              online user &ldquo;quiz&rdquo;. The code supports
-              multi-dimensional tests, with the ability to sum up scores across
-              the dimensions and establish minimum and maximum criteria for
-              each.
-            </p>
-            <p>
-              Sample quizzes are provided for aphantasia (VVIQ) and personality
-              (OCEAN) tests.
-              <a
-                href="https://www.sadied.com/viv-q"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Try the VVIQ test online</a
-              >.
+              Browser-based quiz template for multi-dimensional psychometric
+              tests with scoring and criteria validation.
             </p>
             <span class="section-mark">(portfolio)</span>
           </div>
@@ -272,26 +184,20 @@
 
         <article class="post card">
           <div class="post-img">
-            <div class="post-img">
-              <img
-                src="/portfolio/mac-address-scanner/img.jpeg"
-                alt="MAC Address Scanner"
-              />
-            </div>
+            <img
+              src="/portfolio/mac-address-scanner/img.jpeg"
+              alt="MAC Address Scanner"
+            />
           </div>
+
           <div class="post-text">
             <h2>
               <a href="/portfolio/mac-address-scanner/">MAC Address Scanner</a>
             </h2>
-            <i> </i>
-            <br />
+
             <p>
-              I needed something that would allow a commissioning team to
-              quickly identify devies on a subnet without connecting directly to
-              the network. A small HTML utility using a stack of uvicorn,
-              FastAPI, and ZeroMQ collects tcpdump information and list MAC
-              addresses seen on a network. They are divided into vendor
-              categories that map to different subsystems.
+              Network utility using FastAPI and ZeroMQ to identify devices on a
+              subnet by collecting and categorizing MAC addresses.
             </p>
             <span class="section-mark">(portfolio)</span>
           </div>
@@ -299,25 +205,22 @@
 
         <article class="post card">
           <div class="post-img">
-            <div class="post-img">
-              <img
-                src="/portfolio/data-acquisition-system-api-scraper/img.jpeg"
-                alt="Data Acquisition System API Scraper"
-              />
-            </div>
+            <img
+              src="/portfolio/data-acquisition-system-api-scraper/img.jpeg"
+              alt="Data Acquisition System API Scraper"
+            />
           </div>
+
           <div class="post-text">
             <h2>
               <a href="/portfolio/data-acquisition-system-api-scraper/"
                 >Data Acquisition System API Scraper</a
               >
             </h2>
-            <i> </i>
-            <br />
+
             <p>
-              A prototype for a Python interface to collect data from the Radix
-              IOT Mango data aquisition system. This was used to create data
-              pipelines into operational reports and other contract analytics.
+              Python interface for collecting data from Radix IOT Mango to
+              create operational reports and analytics pipelines.
             </p>
             <span class="section-mark">(portfolio)</span>
           </div>
@@ -325,14 +228,12 @@
 
         <article class="post card">
           <div class="post-img">
-            <div class="post-img">
-              <img src="/portfolio/nonesible/img.jpeg" alt="Nonesible" />
-            </div>
+            <img src="/portfolio/nonesible/img.jpeg" alt="Nonesible" />
           </div>
+
           <div class="post-text">
             <h2><a href="/portfolio/nonesible/">Nonesible</a></h2>
-            <i> </i>
-            <br />
+
             <p>
               Sometimes you need to give a simple explanation of Ansible to a
               person who loves using shell scripts.
@@ -343,21 +244,19 @@
 
         <article class="post card">
           <div class="post-img">
-            <div class="post-img">
-              <img
-                src="/portfolio/various-coding-pursuits/img.jpeg"
-                alt="Various Coding Pursuits"
-              />
-            </div>
+            <img
+              src="/portfolio/various-coding-pursuits/img.jpeg"
+              alt="Various Coding Pursuits"
+            />
           </div>
+
           <div class="post-text">
             <h2>
               <a href="/portfolio/various-coding-pursuits/"
                 >Various Coding Pursuits</a
               >
             </h2>
-            <i> </i>
-            <br />
+
             <p>
               A relatively unorganized set of public code snippets and other
               tools I&rsquo;ve adapted for personal use.
@@ -368,10 +267,15 @@
       </section>
     </main>
     <footer>
-      <p>© Steven Hay 2025. All rights reserved.</p>
+      <p>© Steven Hay 2026. All rights reserved.</p>
       <p>
-        <button id="theme-toggle" type="button" class="theme-toggle-btn">
-          Dark mode
+        <button
+          id="theme-toggle"
+          type="button"
+          class="theme-toggle-btn"
+          aria-label="Toggle theme"
+        >
+          Toggle theme
         </button>
       </p>
       <script src="/js/theme-toggle.js"></script>
