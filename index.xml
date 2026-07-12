@@ -9,13 +9,6 @@
     <lastBuildDate>Tue, 27 May 2025 15:48:07 -0400</lastBuildDate>
     <atom:link href="https://stevenhay.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Welcome</title>
-      <link>https://stevenhay.com/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://stevenhay.com/about/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m Steve, an engineer learning neuroscience.&lt;/p&gt;&#xA;&lt;p&gt;After twenty years working on complex systems—nuclear reactors, grid-scale batteries, machine learning—I&amp;rsquo;m pursuing a PhD in computational neuroscience, with interests in early visual processing.&lt;/p&gt;&#xA;&lt;p&gt;This site is where I write about what I&amp;rsquo;m learning, share projects I&amp;rsquo;m working on, and think through ideas in public.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Using Augmented Reality to Experience Prosopagnosia</title>
       <link>https://stevenhay.com/portfolio/using-augmented-reality-to-experience-prosopagnosia/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
