@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Using Augmented Reality to Experience Prosopagnosia</title>
+    <!--Generated on Tue Jan  1 00:00:00 1980 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/css/latexml/LaTeXML.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="/css/latexml/ltx-article.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="/css/latexml/site.css" type="text/css" />
+    <meta
+      name="texhash"
+      content="929ffecbd2af1d3f9ba6a6142bdbf6ece7f235bee1b0636fa58d5f464a1b093cf871362a3c58b1dca1a512d43863711b"
+    />
+  </head>
+  <body>
+    <div class="ltx_page_main">
+      <div class="ltx_page_content">
+        <article class="ltx_document ltx_authors_1line">
+          <h1 class="ltx_title ltx_title_document">
+            Using Augmented Reality to Experience Prosopagnosia
+          </h1>
+          <div class="ltx_authors">
+            <span class="ltx_creator ltx_role_author">
+              <span class="ltx_personname">Steven Hay </span></span
+            >
+          </div>
+
+          <div class="ltx_abstract">
+            <h6 class="ltx_title ltx_title_abstract">Abstract</h6>
+            <p class="ltx_p">
+              This project aims to simulate the subjective experience of the
+              face blind condition (prosopagnosia) through augmented reality
+              (AR) manipulation of facial features. Informed by research on
+              neural encoding in the fusiform face area, the system captures
+              live video input and distorts faces by altering their geometric
+              features. The aim of the project is to accurately simulate the
+              subjective experience of someone with prosopagnosia, allowing for
+              an immersive exploration of how disrupted facial recognition
+              impacts perception and social interaction. By merging neuroscience
+              insights with AR technology, this work contributes to both the
+              artistic exploration and scientific understanding of face
+              perception disorders.
+            </p>
+          </div>
+          <div id="p1" class="ltx_para">
+            <blockquote class="ltx_quote">
+              <p class="ltx_p">
+                <span class="ltx_text ltx_font_italic"
+                  >”It is useless to base the defense of materialism on any
+                  analysis of mental phenomena that fails to deal explicitly
+                  with their subjective character”    —Thomas Nagel</span
+                >
+              </p>
+            </blockquote>
+          </div>
+          <section id="S1" class="ltx_section">
+            <h2 class="ltx_title ltx_title_section">
+              <span class="ltx_tag ltx_tag_section">1 </span>Problem Statement
+            </h2>
+
+            <div id="S1.p1" class="ltx_para">
+              <p class="ltx_p">
+                There are no widely accepted or scientifically validated
+                immersive simulations of face blindness (prosopagnosia). A
+                search of academic literature revealed no attempts to simulate
+                this subjective experience. However, a blog post was found that
+                explores a similar concept
+                <cite class="ltx_cite ltx_citemacro_cite"
+                  >[<a
+                    href="#bib.bib2"
+                    title="We could use augmented reality to simulate prosopagnosia"
+                    class="ltx_ref"
+                    >BIE21</a
+                  >]</cite
+                >. While AR technology has been used to develop treatments for
+                disorders such as autism spectrum disorder (ASD),
+                attention-deficit hyperactivity disorder (ADHD), and
+                intellectual disabilities (ID)
+                <cite class="ltx_cite ltx_citemacro_cite"
+                  >[<a
+                    href="#bib.bib1"
+                    title="Use of augmented reality in mental health-related conditions: a systematic review"
+                    class="ltx_ref"
+                    >BAS+23</a
+                  >]</cite
+                >, less research is directed towards studying subjective
+                experience.
+              </p>
+            </div>
+            <div id="S1.p2" class="ltx_para">
+              <p class="ltx_p">
+                Prosopagnosia affects up to 5.4 percent of the human population
+                <cite class="ltx_cite ltx_citemacro_cite"
+                  >[<a
+                    href="#bib.bib5"
+                    title="What is the prevalence of developmental prosopagnosia? an empirical assessment of different diagnostic cutoffs"
+                    class="ltx_ref"
+                    >DBB+23</a
+                  >]</cite
+                >, impairing their ability to recognize faces. This impairment
+                impacts a person’s social interactions, personal relationships,
+                and overall quality of life. Exploring subjective experience
+                informs neurological research and provides a pathway to
+                developing better diagnostic tools and treatment modalities. An
+                immersive simulation of prosopagnosia aims to increase public
+                understanding of this neurological condition and promote the
+                awareness of perceptual diversity, increasing empathy towards
+                those with prosopagnosia and other perceptual disorders or
+                differences.
+              </p>
+            </div>
+          </section>
+          <section id="S2" class="ltx_section">
+            <h2 class="ltx_title ltx_title_section">
+              <span class="ltx_tag ltx_tag_section">2 </span>Methodology
+            </h2>
+
+            <section id="S2.SS1" class="ltx_subsection">
+              <h3 class="ltx_title ltx_title_subsection">
+                <span class="ltx_tag ltx_tag_subsection">2.1 </span>Neurological
+                Basis
+              </h3>
+
+              <div id="S2.SS1.p1" class="ltx_para">
+                <p class="ltx_p">
+                  This simulation is uniquely grounded in neuro-scientific
+                  research on face perception, leveraging insights into cell
+                  activation in the fusiform face area (FFA)
+                  <cite class="ltx_cite ltx_citemacro_cite"
+                    >[<a
+                      href="#bib.bib3"
+                      title="The code for facial identity in the primate brain"
+                      class="ltx_ref"
+                      >CT17</a
+                    >]</cite
+                  >. By modifying the neural representations of facial features,
+                  which are encoded in mathematical structures (eigenvalues), a
+                  distorted but realistic human face is generated. In doing so,
+                  the simulation aims to closely mimic the subjective experience
+                  of prosopagnosia. This provides a scientifically supported
+                  basis for simulating face blindness more accurately than
+                  facial blurring.
+                </p>
+              </div>
+            </section>
+            <section id="S2.SS2" class="ltx_subsection">
+              <h3 class="ltx_title ltx_title_subsection">
+                <span class="ltx_tag ltx_tag_subsection">2.2 </span>Validation
+                and Data Collection
+              </h3>
+
+              <div id="S2.SS2.p1" class="ltx_para">
+                <p class="ltx_p">
+                  An implementation will be developed that is suitable for an
+                  interactive, public presentation in a controlled environment.
+                  The system will be validated by tuning the model to achieve
+                  degraded results of a face test for someone without
+                  prosopagnosia. Tests already developed to measure facial
+                  recognition ability, such as the Cambridge Face Memory Test
+                  <cite class="ltx_cite ltx_citemacro_cite"
+                    >[<a
+                      href="#bib.bib7"
+                      title="The cambridge face memory test: results for neurologically intact individuals and an investigation of its validity using inverted face stimuli and prosopagnosic participants"
+                      class="ltx_ref"
+                      >DN06</a
+                    >]</cite
+                  >
+                  or a face recognition training program
+                  <cite class="ltx_cite ltx_citemacro_cite"
+                    >[<a
+                      href="#bib.bib4"
+                      title="Holistic face training enhances face processing in developmental prosopagnosia"
+                      class="ltx_ref"
+                      >DCN14</a
+                    >]</cite
+                  >
+                  can be used to validate the methodology of the simulation. A
+                  short survey can also be given to participants to see whether
+                  they self-report an experience similar to those reported by
+                  those with prosopagnosia.
+                </p>
+              </div>
+            </section>
+          </section>
+          <section id="S3" class="ltx_section">
+            <h2 class="ltx_title ltx_title_section">
+              <span class="ltx_tag ltx_tag_section">3 </span>AR System
+            </h2>
+
+            <section id="S3.SS1" class="ltx_subsection">
+              <h3 class="ltx_title ltx_title_subsection">
+                <span class="ltx_tag ltx_tag_subsection">3.1 </span>Description
+              </h3>
+
+              <div id="S3.SS1.p1" class="ltx_para">
+                <p class="ltx_p">
+                  The system captures a live video feed, detects frontal faces,
+                  and generates 3D models of those faces. Using neural models of
+                  face recognition, specifically those in the fusiform face area
+                  (FFA), a 50 dimensional eigenvalue representation of the face
+                  is constructed
+                  <cite class="ltx_cite ltx_citemacro_cite"
+                    >[<a
+                      href="#bib.bib3"
+                      title="The code for facial identity in the primate brain"
+                      class="ltx_ref"
+                      >CT17</a
+                    >]</cite
+                  >
+                  which represent geometric features of human faces. Each
+                  dimension represents a measurement of a key geometric facial
+                  feature used in human face recognition. An example of such a
+                  measurement might be a subject’s pupillary distance. This
+                  representation is able to both decompose an existing face into
+                  these principal (eigenvalue) components, or generate a face
+                  from these components. The simulation will alters faces it
+                  captures to distort them in a way that preserves their realism
+                  but renders them unrecognizable to the FFA–the distortions
+                  blunting the FFA’s recognition response. The approach aims to
+                  be more immersive than facial blurring since it will preserve
+                  facial detail. This system will be built using existing face
+                  detection learning techniques and will leverage current
+                  research into the FFA neural modeling
+                  <cite class="ltx_cite ltx_citemacro_cite"
+                    >[<a
+                      href="#bib.bib3"
+                      title="The code for facial identity in the primate brain"
+                      class="ltx_ref"
+                      >CT17</a
+                    >]</cite
+                  >.
+                </p>
+              </div>
+            </section>
+            <section id="S3.SS2" class="ltx_subsection">
+              <h3 class="ltx_title ltx_title_subsection">
+                <span class="ltx_tag ltx_tag_subsection">3.2 </span>Technical
+                Challenges
+              </h3>
+
+              <section id="S3.SS2.SSS1" class="ltx_subsubsection">
+                <h4 class="ltx_title ltx_title_subsubsection">
+                  <span class="ltx_tag ltx_tag_subsubsection">3.2.1 </span
+                  >Latency Reduction
+                </h4>
+
+                <div id="S3.SS2.SSS1.p1" class="ltx_para">
+                  <p class="ltx_p">
+                    One challenge in implementing this simulation will be
+                    performing all of these processing steps in real time in
+                    order to give an immersive experience. Optimization of this
+                    processing will be essential to minimizing lag, enhancing
+                    the experience. A total processing time of about 20ms is
+                    desired.
+                    <cite class="ltx_cite ltx_citemacro_cite"
+                      >[<a
+                        href="#bib.bib13"
+                        title="Towards an evolved immersive experience: exploring 5g- and beyond-enabled ultra-low-latency communications for augmented and virtual reality"
+                        class="ltx_ref"
+                        >HR23</a
+                      >]</cite
+                    >
+                    If additional processing beyond what is available in the
+                    headset is needed, a local server with GPU or TPU may be
+                    needed to offload face recognition, decomposition, and
+                    rendering via a local network to the server in order to
+                    reduce latency.
+                  </p>
+                </div>
+              </section>
+              <section id="S3.SS2.SSS2" class="ltx_subsubsection">
+                <h4 class="ltx_title ltx_title_subsubsection">
+                  <span class="ltx_tag ltx_tag_subsubsection">3.2.2 </span>Raw
+                  Video Stream Access
+                </h4>
+
+                <div id="S3.SS2.SSS2.p1" class="ltx_para">
+                  <p class="ltx_p">
+                    Current AR technology is likely to have the processing
+                    capability to perform the real time video transformations
+                    needed to complete the project. However, access to the raw
+                    video stream in most headsets is currently blocked to
+                    developers to alleviate privacy concerns related to video
+                    recording others without consent. It may be possible to use
+                    external cameras and feed that data directly into the
+                    headset or to a companion device for processing, but care
+                    would need to be taken to ensure low-latency requirements
+                    are met. Alternative approaches using static images, or
+                    potentially a virtual mirror, could be used to achieve the
+                    objective in a different way. It is also possible that video
+                    stream access could be arranged for use for this specific
+                    purpose.
+                  </p>
+                </div>
+              </section>
+            </section>
+          </section>
+          <section id="S4" class="ltx_section">
+            <h2 class="ltx_title ltx_title_section">
+              <span class="ltx_tag ltx_tag_section">4 </span>Exhibit
+            </h2>
+
+            <section id="S4.SS1" class="ltx_subsection">
+              <h3 class="ltx_title ltx_title_subsection">
+                <span class="ltx_tag ltx_tag_subsection">4.1 </span>Description
+              </h3>
+
+              <div id="S4.SS1.p1" class="ltx_para">
+                <p class="ltx_p">
+                  In addition to the basic technological implementation of the
+                  simulation, an experience will be designed for public
+                  participation. The exhibit will consist of contextual placards
+                  or videos, with a private section where small groups of people
+                  (preferably people who know each other) will participate in
+                  the experience. It will probably be necessary to provide some
+                  kind of removable but uniform robe and headgear to
+                  participants to minimize recognition based on other features.
+                  A rotation system will be needed such that each person has the
+                  experience with one known person and others they will not
+                  recognize.
+                </p>
+              </div>
+            </section>
+            <section id="S4.SS2" class="ltx_subsection">
+              <h3 class="ltx_title ltx_title_subsection">
+                <span class="ltx_tag ltx_tag_subsection">4.2 </span>Context and
+                Limitations
+              </h3>
+
+              <div id="S4.SS2.p1" class="ltx_para">
+                <p class="ltx_p">
+                  When providing a simulation such as this to the public, it is
+                  crucial to ensure that participants are informed and consent
+                  to the experience they are going to have. Additionally, the
+                  limitations and purpose of the simulation must be made clear.
+                  A contextual video or placards will be written to brief
+                  participants and establish context for the demonstration as an
+                  educational tool designed to develop insight into perceptual
+                  diversity and to increase empathy for those with different
+                  subjective realities. It will be made clear that the
+                  simulation is merely an approximation of face blindness, and
+                  comes with inherent limitations in accuracy as well. These
+                  materials will be developed in cooperation with people who
+                  have prosopagnosia, to ensure there is sufficient community
+                  feedback. Consulting on the project will be Sadie Dingfelder,
+                  a face blind journalist and science writer who has reported
+                  and written a book on her experience living with prosopagnosia
+                  and other perceptual differences
+                  <cite class="ltx_cite ltx_citemacro_cite"
+                    >[<a
+                      href="#bib.bib6"
+                      title="Do i know you?: a faceblind reporter’s journey into the science of sight, memory, and imagination"
+                      class="ltx_ref"
+                      >DIN24</a
+                    >]</cite
+                  >.
+                </p>
+              </div>
+            </section>
+          </section>
+          <section id="S5" class="ltx_section">
+            <h2 class="ltx_title ltx_title_section">
+              <span class="ltx_tag ltx_tag_section">5 </span>Future Work
+            </h2>
+
+            <section id="S5.SS1" class="ltx_subsection">
+              <h3 class="ltx_title ltx_title_subsection">
+                <span class="ltx_tag ltx_tag_subsection">5.1 </span>Other
+                Perceptual Disorders
+              </h3>
+
+              <div id="S5.SS1.p1" class="ltx_para">
+                <p class="ltx_p">
+                  The simulation of other disorders using augmented reality can
+                  be explored. For example, there is less common form of
+                  prosopagnosia called prosopometamorphopsia (demon face
+                  syndrome)
+                  <cite class="ltx_cite ltx_citemacro_cite"
+                    >[<a
+                      href="#bib.bib8"
+                      title="Face distortions in prosopometamorphopsia provide new insights into the organization of face perception"
+                      class="ltx_ref"
+                      >HAD23</a
+                    >]</cite
+                  >. Also depth perception disorders such as visual dysmetropsia
+                  (distorted perception of distance)
+                  <cite class="ltx_cite ltx_citemacro_cite"
+                    >[<a
+                      href="#bib.bib10"
+                      title="The Alice-in-Wonderland Syndrome"
+                      class="ltx_ref"
+                      >LL17</a
+                    >]</cite
+                  >
+                  or stereo blindness (lack of three dimensional vision)
+                  <cite class="ltx_cite ltx_citemacro_cite"
+                    >[<a
+                      href="#bib.bib11"
+                      title="Stereopsis and stereoblindness"
+                      class="ltx_ref"
+                      >RIC70</a
+                    >]</cite
+                  >. There are also other perceptual consequences of amblyopia
+                  (abnormal binocular interaction) other than stereo blindness
+                  <cite class="ltx_cite ltx_citemacro_cite"
+                    >[<a
+                      href="#bib.bib12"
+                      title="Binocular vision and ocular motility: theory and management of strabismus"
+                      class="ltx_ref"
+                      >VC01</a
+                    >]</cite
+                  >.
+                </p>
+              </div>
+            </section>
+            <section id="S5.SS2" class="ltx_subsection">
+              <h3 class="ltx_title ltx_title_subsection">
+                <span class="ltx_tag ltx_tag_subsection">5.2 </span>Assistive AR
+                Technology
+              </h3>
+
+              <div id="S5.SS2.p1" class="ltx_para">
+                <p class="ltx_p">
+                  Combined with facial recognition this project could contribute
+                  to the development of assistive AR technology for people with
+                  prosopagnosia by helping to label or visually distinguish
+                  known faces through the AR device.
+                </p>
+              </div>
+            </section>
+            <section id="S5.SS3" class="ltx_subsection">
+              <h3 class="ltx_title ltx_title_subsection">
+                <span class="ltx_tag ltx_tag_subsection">5.3 </span>Improved
+                Simulations
+              </h3>
+
+              <div id="S5.SS3.p1" class="ltx_para">
+                <p class="ltx_p">
+                  There is more work possible to improve the simulation of
+                  prosopagnosia with AR. This project will limit its simulation
+                  to frontal views. Expansion of face recognition and 3D
+                  modeling to include oblique and profile views would be an
+                  improvement to the simulation.
+                </p>
+              </div>
+            </section>
+            <section id="S5.SS4" class="ltx_subsection">
+              <h3 class="ltx_title ltx_title_subsection">
+                <span class="ltx_tag ltx_tag_subsection">5.4 </span>Adaptations
+                to a Wider Audience
+              </h3>
+
+              <div id="S5.SS4.p1" class="ltx_para">
+                <p class="ltx_p">
+                  Other simpler simulations of face blindness may also be
+                  considered that would be less immersive but accessible to a
+                  wider audience. Such a simulation could have farther reach
+                  than one requiring a headset. For example, a JavaScript plugin
+                  powered by a remote back-end (or possibly client-side using
+                  Web Assembly) in a web browser could be developed to find and
+                  alter faces on social media platforms such as Facebook or
+                  Instagram. Such a tool could be used to collect data from a
+                  larger and more diverse set of people.
+                </p>
+              </div>
+            </section>
+          </section>
+          <section id="bib" class="ltx_bibliography">
+            <h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+            <ul id="bib.L1" class="ltx_biblist">
+              <li id="bib.bib1" class="ltx_bibitem ltx_bib_article">
+                <span
+                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
+                  >[BAS+23]</span
+                >
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_author"
+                    >Ç. N. Bakır, S. O. Abbas, E. Sever, A. Ö. Morey, H. A.
+                    Genç, and T. Mutluer</span
+                  ><span class="ltx_text ltx_bib_year"> (2023)</span>
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_title"
+                    >Use of augmented reality in mental health-related
+                    conditions: a systematic review</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_journal">Digital Health</span>
+                  <span class="ltx_text ltx_bib_volume">9</span>,
+                  <span class="ltx_text ltx_bib_pages">
+                    pp. 20552076231203649</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  >External Links:
+                  <span class="ltx_text ltx_bib_links"
+                    ><a
+                      href="https://dx.doi.org/10.1177/20552076231203649"
+                      title=""
+                      class="ltx_ref doi ltx_bib_external"
+                      >Document</a
+                    >,
+                    <a
+                      href="https://doi.org/10.1177/20552076231203649"
+                      title=""
+                      class="ltx_ref ltx_bib_external"
+                      >Link</a
+                    ></span
+                  >
+                </span>
+                <span class="ltx_bibblock ltx_bib_cited"
+                  >Cited by:
+                  <a
+                    href="#S1.p1"
+                    title="1 Problem Statement ‣ Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_tag">§1</span></a
+                  >.
+                </span>
+              </li>
+              <li id="bib.bib2" class="ltx_bibitem ltx_bib_misc">
+                <span
+                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
+                  >[BIE21]</span
+                >
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_author">D. Bieber</span
+                  ><span class="ltx_text ltx_bib_year"> (2021-12)</span>
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_title"
+                    >We could use augmented reality to simulate
+                    prosopagnosia</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  >Note:
+                  <span class="ltx_text ltx_bib_note"
+                    >Accessed: 2024-09-25</span
+                  >
+                </span>
+                <span class="ltx_bibblock"
+                  >External Links:
+                  <span class="ltx_text ltx_bib_links"
+                    ><a
+                      href="https://davidbieber.com/snippets/2021-12-12-prosopagnosia-augmented-reality/"
+                      title=""
+                      class="ltx_ref ltx_bib_external"
+                      >Link</a
+                    ></span
+                  >
+                </span>
+                <span class="ltx_bibblock ltx_bib_cited"
+                  >Cited by:
+                  <a
+                    href="#S1.p1"
+                    title="1 Problem Statement ‣ Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_tag">§1</span></a
+                  >.
+                </span>
+              </li>
+              <li id="bib.bib3" class="ltx_bibitem ltx_bib_article">
+                <span
+                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
+                  >[CT17]</span
+                >
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_author"
+                    >L. Chang and D. Y. Tsao</span
+                  ><span class="ltx_text ltx_bib_year"> (2017-09)</span>
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_title"
+                    >The code for facial identity in the primate brain</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_journal">Cell</span>
+                  <span class="ltx_text ltx_bib_volume">169</span> (<span
+                    class="ltx_text ltx_bib_number"
+                    >6</span
+                  >),
+                  <span class="ltx_text ltx_bib_pages"> pp. 1013–1028.e14</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  >External Links:
+                  <span class="ltx_text ltx_bib_links"
+                    ><a
+                      href="https://dx.doi.org/10.1016/j.cell.2017.05.011"
+                      title=""
+                      class="ltx_ref doi ltx_bib_external"
+                      >Document</a
+                    >,
+                    <span class="ltx_text issn ltx_bib_external"
+                      >ISSN 0092-8674</span
+                    >,
+                    <a
+                      href="https://doi.org/10.1016/j.cell.2017.05.011"
+                      title=""
+                      class="ltx_ref ltx_bib_external"
+                      >Link</a
+                    ></span
+                  >
+                </span>
+                <span class="ltx_bibblock ltx_bib_cited"
+                  >Cited by:
+                  <a
+                    href="#S2.SS1.p1"
+                    title="2.1 Neurological Basis ‣ 2 Methodology ‣ Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_tag">§2.1</span></a
+                  >,
+                  <a
+                    href="#S3.SS1.p1"
+                    title="3.1 Description ‣ 3 AR System ‣ Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_tag">§3.1</span></a
+                  >.
+                </span>
+              </li>
+              <li id="bib.bib5" class="ltx_bibitem ltx_bib_article">
+                <span
+                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
+                  >[DBB+23]</span
+                >
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_author"
+                    >J. DeGutis, K. Bahierathan, K. Barahona, E. Lee, T. C.
+                    Evans, H. M. Shin, M. Mishra, J. Likitlersuang, and J. B.
+                    Wilmer</span
+                  ><span class="ltx_text ltx_bib_year"> (2023)</span>
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_title"
+                    >What is the prevalence of developmental prosopagnosia? an
+                    empirical assessment of different diagnostic cutoffs</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_journal">Cortex</span>
+                  <span class="ltx_text ltx_bib_volume">161</span>,
+                  <span class="ltx_text ltx_bib_pages"> pp. 51–64</span>.
+                </span>
+                <span class="ltx_bibblock"
+                  >External Links:
+                  <span class="ltx_text ltx_bib_links"
+                    ><span class="ltx_text issn ltx_bib_external"
+                      >ISSN 0010-9452</span
+                    >,
+                    <a
+                      href="https://dx.doi.org/https%3A//doi.org/10.1016/j.cortex.2022.12.014"
+                      title=""
+                      class="ltx_ref doi ltx_bib_external"
+                      >Document</a
+                    >,
+                    <a
+                      href="https://www.sciencedirect.com/science/article/pii/S0010945223000138"
+                      title=""
+                      class="ltx_ref ltx_bib_external"
+                      >Link</a
+                    ></span
+                  >
+                </span>
+                <span class="ltx_bibblock ltx_bib_cited"
+                  >Cited by:
+                  <a
+                    href="#S1.p2"
+                    title="1 Problem Statement ‣ Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_tag">§1</span></a
+                  >.
+                </span>
+              </li>
+              <li id="bib.bib4" class="ltx_bibitem ltx_bib_article">
+                <span
+                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
+                  >[DCN14]</span
+                >
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_author"
+                    >J. DeGutis, S. Cohan, and K. Nakayama</span
+                  ><span class="ltx_text ltx_bib_year"> (2014-03)</span>
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_title"
+                    >Holistic face training enhances face processing in
+                    developmental prosopagnosia</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_journal">Brain</span>
+                  <span class="ltx_text ltx_bib_volume">137</span> (<span
+                    class="ltx_text ltx_bib_number"
+                    >6</span
+                  >),
+                  <span class="ltx_text ltx_bib_pages"> pp. 1781–1798</span>.
+                </span>
+                <span class="ltx_bibblock"
+                  >External Links:
+                  <span class="ltx_text ltx_bib_links"
+                    ><span class="ltx_text issn ltx_bib_external"
+                      >ISSN 0006-8950</span
+                    >,
+                    <a
+                      href="https://dx.doi.org/10.1093/brain/awu062"
+                      title=""
+                      class="ltx_ref doi ltx_bib_external"
+                      >Document</a
+                    >,
+                    <a
+                      href="https://doi.org/10.1093/brain/awu062"
+                      title=""
+                      class="ltx_ref ltx_bib_external"
+                      >Link</a
+                    ></span
+                  >
+                </span>
+                <span class="ltx_bibblock ltx_bib_cited"
+                  >Cited by:
+                  <a
+                    href="#S2.SS2.p1"
+                    title="2.2 Validation and Data Collection ‣ 2 Methodology ‣ Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_tag">§2.2</span></a
+                  >.
+                </span>
+              </li>
+              <li id="bib.bib6" class="ltx_bibitem ltx_bib_book">
+                <span
+                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
+                  >[DIN24]</span
+                >
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_author">S. Dingfelder</span
+                  ><span class="ltx_text ltx_bib_year"> (2024-06)</span>
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_title"
+                    >Do i know you?: a faceblind reporter’s journey into the
+                    science of sight, memory, and imagination</span
+                  >.
+                </span>
+                <span class="ltx_bibblock">
+                  <span class="ltx_text ltx_bib_publisher"
+                    >Little, Brown and Company</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  >External Links:
+                  <span class="ltx_text ltx_bib_links"
+                    ><span class="ltx_text isbn ltx_bib_external"
+                      >ISBN 0316545147</span
+                    >,
+                    <a
+                      href="https://www.hachettebookgroup.com/titles/sadie-dingfelder/do-i-know-you/9780316545433/"
+                      title=""
+                      class="ltx_ref ltx_bib_external"
+                      >Link</a
+                    ></span
+                  >
+                </span>
+                <span class="ltx_bibblock ltx_bib_cited"
+                  >Cited by:
+                  <a
+                    href="#S4.SS2.p1"
+                    title="4.2 Context and Limitations ‣ 4 Exhibit ‣ Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_tag">§4.2</span></a
+                  >.
+                </span>
+              </li>
+              <li id="bib.bib7" class="ltx_bibitem ltx_bib_article">
+                <span
+                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
+                  >[DN06]</span
+                >
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_author"
+                    >B. Duchaine and K. Nakayama</span
+                  ><span class="ltx_text ltx_bib_year"> (2006)</span>
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_title"
+                    >The cambridge face memory test: results for neurologically
+                    intact individuals and an investigation of its validity
+                    using inverted face stimuli and prosopagnosic
+                    participants</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_journal"
+                    >Neuropsychologia</span
+                  >
+                  <span class="ltx_text ltx_bib_volume">44</span> (<span
+                    class="ltx_text ltx_bib_number"
+                    >4</span
+                  >), <span class="ltx_text ltx_bib_pages"> pp. 576–585</span>.
+                </span>
+                <span class="ltx_bibblock ltx_bib_cited"
+                  >Cited by:
+                  <a
+                    href="#S2.SS2.p1"
+                    title="2.2 Validation and Data Collection ‣ 2 Methodology ‣ Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_tag">§2.2</span></a
+                  >.
+                </span>
+              </li>
+              <li id="bib.bib13" class="ltx_bibitem ltx_bib_article">
+                <span
+                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
+                  >[HR23]</span
+                >
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_author"
+                    >A. Hazarika and M. Rahmati</span
+                  ><span class="ltx_text ltx_bib_year"> (2023)</span>
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_title"
+                    >Towards an evolved immersive experience: exploring 5g- and
+                    beyond-enabled ultra-low-latency communications for
+                    augmented and virtual reality</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_journal"
+                    >Sensors (Basel, Switzerland)</span
+                  >
+                  <span class="ltx_text ltx_bib_volume">23</span>.
+                </span>
+                <span class="ltx_bibblock"
+                  >External Links:
+                  <span class="ltx_text ltx_bib_links"
+                    ><a
+                      href="https://api.semanticscholar.org/CorpusID:257947721"
+                      title=""
+                      class="ltx_ref ltx_bib_external"
+                      >Link</a
+                    ></span
+                  >
+                </span>
+                <span class="ltx_bibblock ltx_bib_cited"
+                  >Cited by:
+                  <a
+                    href="#S3.SS2.SSS1.p1"
+                    title="3.2.1 Latency Reduction ‣ 3.2 Technical Challenges ‣ 3 AR System ‣ Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_tag">§3.2.1</span></a
+                  >.
+                </span>
+              </li>
+              <li id="bib.bib8" class="ltx_bibitem ltx_bib_article">
+                <span
+                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
+                  >[HAD23]</span
+                >
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_author"
+                    >S. B. Herald, J. Almeida, and B. Duchaine</span
+                  ><span class="ltx_text ltx_bib_year"> (2023)</span>
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_title"
+                    >Face distortions in prosopometamorphopsia provide new
+                    insights into the organization of face perception</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_journal"
+                    >Neuropsychologia</span
+                  >
+                  <span class="ltx_text ltx_bib_volume">182</span>,
+                  <span class="ltx_text ltx_bib_pages"> pp. 108517</span>.
+                </span>
+                <span class="ltx_bibblock"
+                  >External Links:
+                  <span class="ltx_text ltx_bib_links"
+                    ><span class="ltx_text issn ltx_bib_external"
+                      >ISSN 0028-3932</span
+                    >,
+                    <a
+                      href="https://dx.doi.org/https%3A//doi.org/10.1016/j.neuropsychologia.2023.108517"
+                      title=""
+                      class="ltx_ref doi ltx_bib_external"
+                      >Document</a
+                    >,
+                    <a
+                      href="https://www.sciencedirect.com/science/article/pii/S0028393223000519"
+                      title=""
+                      class="ltx_ref ltx_bib_external"
+                      >Link</a
+                    ></span
+                  >
+                </span>
+                <span class="ltx_bibblock ltx_bib_cited"
+                  >Cited by:
+                  <a
+                    href="#S5.SS1.p1"
+                    title="5.1 Other Perceptual Disorders ‣ 5 Future Work ‣ Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_tag">§5.1</span></a
+                  >.
+                </span>
+              </li>
+              <li id="bib.bib10" class="ltx_bibitem ltx_bib_incollection">
+                <span
+                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
+                  >[LL17]</span
+                >
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_author"
+                    >D. J. Lanska and J. R. Lanska</span
+                  ><span class="ltx_text ltx_bib_year"> (2017-12)</span>
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_title"
+                    >The Alice-in-Wonderland Syndrome</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  >In
+                  <span class="ltx_text ltx_bib_inbook"
+                    >Neurologic-Psychiatric Syndromes in Focus - Part II: From
+                    Psychiatry to Neurology</span
+                  >,
+                </span>
+                <span class="ltx_bibblock"
+                  >External Links:
+                  <span class="ltx_text ltx_bib_links"
+                    ><span class="ltx_text isbn ltx_bib_external"
+                      >ISBN 978-3-318-06088-1</span
+                    >,
+                    <a
+                      href="https://dx.doi.org/10.1159/000475722"
+                      title=""
+                      class="ltx_ref doi ltx_bib_external"
+                      >Document</a
+                    >,
+                    <a
+                      href="https://doi.org/10.1159/000475722"
+                      title=""
+                      class="ltx_ref ltx_bib_external"
+                      >Link</a
+                    ></span
+                  >
+                </span>
+                <span class="ltx_bibblock ltx_bib_cited"
+                  >Cited by:
+                  <a
+                    href="#S5.SS1.p1"
+                    title="5.1 Other Perceptual Disorders ‣ 5 Future Work ‣ Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_tag">§5.1</span></a
+                  >.
+                </span>
+              </li>
+              <li id="bib.bib9" class="ltx_bibitem ltx_bib_article">
+                <span
+                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
+                  >[NAG74]</span
+                >
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_author">T. Nagel</span
+                  ><span class="ltx_text ltx_bib_year"> (1974)</span>
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_title"
+                    >What is it like to be a bat?</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_journal"
+                    >Philosophical Review</span
+                  >
+                  <span class="ltx_text ltx_bib_volume">83</span> (<span
+                    class="ltx_text ltx_bib_number"
+                    >4</span
+                  >), <span class="ltx_text ltx_bib_pages"> pp. 435–50</span>.
+                </span>
+                <span class="ltx_bibblock"
+                  >External Links:
+                  <span class="ltx_text ltx_bib_links"
+                    ><a
+                      href="https://dx.doi.org/10.2307/2183914"
+                      title=""
+                      class="ltx_ref doi ltx_bib_external"
+                      >Document</a
+                    ></span
+                  >
+                </span>
+                <span class="ltx_bibblock ltx_bib_cited"
+                  >Cited by:
+                  <a
+                    href="#p2"
+                    title="Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_title"
+                      >Using Augmented Reality to Experience Prosopagnosia</span
+                    ></a
+                  >.
+                </span>
+              </li>
+              <li id="bib.bib11" class="ltx_bibitem ltx_bib_article">
+                <span
+                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
+                  >[RIC70]</span
+                >
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_author">W. Richards</span
+                  ><span class="ltx_text ltx_bib_year"> (1970)</span>
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_title"
+                    >Stereopsis and stereoblindness</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_journal"
+                    >Experimental Brain Research</span
+                  >
+                  <span class="ltx_text ltx_bib_volume">10</span>,
+                  <span class="ltx_text ltx_bib_pages"> pp. 380–388</span>.
+                </span>
+                <span class="ltx_bibblock"
+                  >External Links:
+                  <span class="ltx_text ltx_bib_links"
+                    ><a
+                      href="https://dx.doi.org/10.1007/BF02324765"
+                      title=""
+                      class="ltx_ref doi ltx_bib_external"
+                      >Document</a
+                    >,
+                    <a
+                      href="https://doi.org/10.1007/BF02324765"
+                      title=""
+                      class="ltx_ref ltx_bib_external"
+                      >Link</a
+                    ></span
+                  >
+                </span>
+                <span class="ltx_bibblock ltx_bib_cited"
+                  >Cited by:
+                  <a
+                    href="#S5.SS1.p1"
+                    title="5.1 Other Perceptual Disorders ‣ 5 Future Work ‣ Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_tag">§5.1</span></a
+                  >.
+                </span>
+              </li>
+              <li id="bib.bib12" class="ltx_bibitem ltx_bib_book">
+                <span
+                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
+                  >[VC01]</span
+                >
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_author"
+                    >G. K. Von Noorden and E. C. Campos</span
+                  ><span class="ltx_text ltx_bib_year"> (2001)</span>
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_title"
+                    >Binocular vision and ocular motility: theory and management
+                    of strabismus</span
+                  >.
+                </span>
+                <span class="ltx_bibblock"
+                  ><span class="ltx_text ltx_bib_edition">6th edition</span>,
+                  <span class="ltx_text ltx_bib_publisher">Mosby</span>,
+                  <span class="ltx_text ltx_bib_place">St. Louis, MO</span>.
+                </span>
+                <span class="ltx_bibblock"
+                  >External Links:
+                  <span class="ltx_text ltx_bib_links"
+                    ><span class="ltx_text isbn ltx_bib_external"
+                      >ISBN 0-323-01129-2</span
+                    >,
+                    <span class="ltx_text lccn ltx_bib_external"
+                      >LCCN 2001042586</span
+                    ></span
+                  >
+                </span>
+                <span class="ltx_bibblock ltx_bib_cited"
+                  >Cited by:
+                  <a
+                    href="#S5.SS1.p1"
+                    title="5.1 Other Perceptual Disorders ‣ 5 Future Work ‣ Using Augmented Reality to Experience Prosopagnosia"
+                    class="ltx_ref"
+                    ><span class="ltx_text ltx_ref_tag">§5.1</span></a
+                  >.
+                </span>
+              </li>
+            </ul>
+          </section>
+          <div id="p2" class="ltx_para">
+            <p class="ltx_p"></p>
+          </div>
+        </article>
+      </div>
+      <footer class="ltx_page_footer">
+        <div class="ltx_page_logo">
+          Generated on Tue Jan 1 00:00:00 1980 by
+          <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"
+            ><span style="letter-spacing: -0.2em; margin-right: 0.1em"
+              >L<span
+                class="ltx_font_smallcaps"
+                style="position: relative; bottom: 2.2pt"
+                >a</span
+              >T<span
+                class="ltx_font_smallcaps"
+                style="font-size: 120%; position: relative; bottom: -0.2ex"
+                >e</span
+              ></span
+            ><span style="font-size: 90%; position: relative; bottom: -0.2ex"
+              >XML</span
+            ><img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg=="
+              alt="Mascot Sammy"
+          /></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

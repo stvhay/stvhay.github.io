@@ -1,40 +1,63 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://stevenhay.com/portfolio/using-augmented-reality-to-experience-prosopagnosia/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/portfolio/photography/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/portfolio/digital-music/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/portfolio/batocera-linux/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/portfolio/javascript-psychometric-quiz-template/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/portfolio/mac-address-scanner/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/portfolio/data-acquisition-system-api-scraper/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/portfolio/nonesible/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/portfolio/various-coding-pursuits/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/writing/computational-neuroscience-meets-the-17th-century/</loc>
     <lastmod>2025-05-27T15:48:07-04:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/</loc>
     <lastmod>2025-05-27T15:48:07-04:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/writing/</loc>
     <lastmod>2025-05-27T15:48:07-04:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/categories/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/contact/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/portfolio/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>https://stevenhay.com/tags/</loc>
+  </url>
+  <url>
+    <loc>https://stevenhay.com/docs/cv/cv-steve-hay.html</loc>
+  </url>
+  <url>
+    <loc>https://stevenhay.com/docs/experience-prosopagnosia/experience-prosopagnosia.html</loc>
+  </url>
+  <url>
+    <loc>https://stevenhay.com/docs/experience-prosopagnosia/experience-prosopagnosia-design.html</loc>
   </url>
 </urlset>
