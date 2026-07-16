@@ -1,1979 +1,917 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>
-      Software and Hardware Architecture Proposal for “Using Augmented Reality
-      to Experience Prosopagnosia”
-    </title>
-    <!--Generated on Tue Jan  1 00:00:00 1980 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/css/latexml/LaTeXML.css" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="/css/latexml/ltx-article.css"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="/css/latexml/site.css" type="text/css" />
-    <meta
-      name="texhash"
-      content="001605261986bf9ade720bee1820ab09b7410736a8adbe65608f8691c4f876d26f480e0263152abd6e78f5b68dd78a96"
-    />
-  </head>
-  <body>
-    <div class="ltx_page_main">
-      <div class="ltx_page_content">
-        <article class="ltx_document ltx_authors_1line">
-          <h1 class="ltx_title ltx_title_document">
-            Software and Hardware Architecture Proposal for
-            <br class="ltx_break" />“Using Augmented Reality to Experience
-            Prosopagnosia”
-          </h1>
-          <div class="ltx_authors">
-            <span class="ltx_creator ltx_role_author">
-              <span class="ltx_personname"> </span
-            ></span>
-          </div>
+<head><meta charset="utf-8"/><meta content="default-src 'none'; img-src 'self'; style-src 'self' 'sha256-ByOLq//p3qtHJJ5t6Ak9UCfjgm5g1X3dXASclsfKS18='; font-src 'self'; base-uri 'none'; form-action 'none'" http-equiv="Content-Security-Policy"/>
 
-          <section id="Sx1" class="ltx_section">
-            <h2 class="ltx_title ltx_title_section">Introduction</h2>
+<title>Software and Hardware Architecture Proposal for “Using Augmented Reality to Experience Prosopagnosia”</title>
+<!--Generated on Tue Jan  1 00:00:00 1980 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<link href="/favicon.ico" rel="icon" sizes="32x32"/><link href="/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/css/latexml/LaTeXML.css" rel="stylesheet" type="text/css"/><link href="/css/latexml/ltx-article.css" rel="stylesheet" type="text/css"/><link href="/css/latexml/site.css" rel="stylesheet" type="text/css"/><style>
+.ltxs-list-style-type-none { list-style-type:none; }
+</style><meta content="001605261986bf9ade720bee1820ab09b7410736a8adbe65608f8691c4f876d26f480e0263152abd6e78f5b68dd78a96" name="texhash"/><meta content="1" name="latexml-pipeline"/></head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Software and Hardware Architecture Proposal for
+<br class="ltx_break"/>“Using Augmented Reality to Experience Prosopagnosia”</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">
+</span></span>
+</div>
+<section class="ltx_section" id="Sx1">
+<h2 class="ltx_title ltx_title_section">Introduction</h2>
+<div class="ltx_para" id="Sx1.p1">
+<p class="ltx_p">This proposal outlines a comprehensive software and hardware architecture to implement an augmented reality (AR) system that simulates the subjective experience of prosopagnosia (face blindness). The system aims to manipulate live video feeds by altering facial features in real-time, based on neural models of face recognition, specifically those in the fusiform face area (FFA). The primary goal is to create an immersive experience that accurately reflects the perceptual challenges faced by individuals with prosopagnosia.</p>
+</div>
+</section>
+<section class="ltx_section" id="Sx2">
+<h2 class="ltx_title ltx_title_section">Overview of the Proposed Architecture</h2>
+<div class="ltx_para" id="Sx2.p1">
+<p class="ltx_p">The system comprises both on-device and server-side components to achieve real-time performance with minimal latency. It utilizes advanced computer vision and machine learning algorithms to detect, model, and alter faces within a live video stream. The architecture is designed to be scalable, modular, and optimized for real-time processing, ensuring an immersive and seamless user experience.</p>
+</div>
+</section>
+<section class="ltx_section" id="S1">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Software Architecture</h2>
+<section class="ltx_subsection" id="S1.SS1">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span>Software Components Overview</h3>
+<div class="ltx_para" id="S1.SS1.p1">
+<ul class="ltx_itemize" id="S1.I1">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I1.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I1.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Face Detection and Tracking Module</span></p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I1.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I1.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Face Representation and Modeling Module</span></p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I1.i3">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I1.i3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Face Distortion Module</span></p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I1.i4">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I1.i4.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Rendering Module</span></p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I1.i5">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I1.i5.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">User Interface Module</span></p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I1.i6">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I1.i6.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Networking Module (if offloading processing)</span></p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I1.i7">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I1.i7.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Latency Optimization Module</span></p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsection" id="S1.SS2">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span>Data Flow and Processing Pipeline</h3>
+<div class="ltx_para" id="S1.SS2.p1">
+<ol class="ltx_enumerate" id="S1.I2">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I2.i1">
+<span class="ltx_tag ltx_tag_item">1.</span>
+<div class="ltx_para" id="S1.I2.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Video Capture</span>: The AR headset’s camera captures live video feeds.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I2.i2">
+<span class="ltx_tag ltx_tag_item">2.</span>
+<div class="ltx_para" id="S1.I2.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Face Detection and Tracking</span>: Real-time detection of frontal faces and tracking their positions in successive frames.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I2.i3">
+<span class="ltx_tag ltx_tag_item">3.</span>
+<div class="ltx_para" id="S1.I2.i3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Face Representation and Modeling</span>: Generation of 3D face models and extraction of a 50-dimensional eigenvalue representation based on FFA neural models.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I2.i4">
+<span class="ltx_tag ltx_tag_item">4.</span>
+<div class="ltx_para" id="S1.I2.i4.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Face Distortion</span>: Alteration of facial features by modifying the eigenvalues to simulate prosopagnosia.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I2.i5">
+<span class="ltx_tag ltx_tag_item">5.</span>
+<div class="ltx_para" id="S1.I2.i5.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Rendering</span>: Overlay of the distorted faces onto the original video feed in real-time.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I2.i6">
+<span class="ltx_tag ltx_tag_item">6.</span>
+<div class="ltx_para" id="S1.I2.i6.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Display</span>: Presentation of the augmented video feed to the user through the AR headset.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I2.i7">
+<span class="ltx_tag ltx_tag_item">7.</span>
+<div class="ltx_para" id="S1.I2.i7.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">User Interaction and Feedback</span>: Optional modules for user input and experience surveys.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section class="ltx_subsection" id="S1.SS3">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.3 </span>Detailed Component Description</h3>
+<section class="ltx_subsubsection" id="S1.SS3.SSS1">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.3.1 </span>Face Detection and Tracking Module</h4>
+<div class="ltx_para" id="S1.SS3.SSS1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Function</span>: Detects faces in real-time from the video feed and tracks them across frames.</p>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS1.p2">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Technologies</span>:</p>
+<ul class="ltx_itemize" id="S1.I3">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I3.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I3.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">OpenCV</span>: For initial face detection using Haar Cascades or DNN-based detectors.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I3.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I3.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Dlib</span>: For facial landmark detection.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I3.i3">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I3.i3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">TensorFlow Lite</span> or <span class="ltx_text ltx_font_bold">ONNX Runtime</span>: For optimized neural network inference on mobile devices.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS1.p3">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Algorithms</span>:</p>
+<ul class="ltx_itemize" id="S1.I4">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I4.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I4.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Multi-task Cascaded Convolutional Networks (MTCNN)</span> for face detection.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I4.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I4.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Kalman Filters</span> or <span class="ltx_text ltx_font_bold">Optical Flow</span> for tracking.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsubsection" id="S1.SS3.SSS2">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.3.2 </span>Face Representation and Modeling Module</h4>
+<div class="ltx_para" id="S1.SS3.SSS2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Function</span>: Generates 3D face models and computes the eigenvalue representation of facial features. <cite class="ltx_cite ltx_citemacro_cite">[<a class="ltx_ref" href="#bib.bib1" title="The code for facial identity in the primate brain">CT17</a>]</cite></p>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS2.p2">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Technologies</span>:</p>
+<ul class="ltx_itemize" id="S1.I5">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I5.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I5.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Eigenfaces Method</span>: For face representation using Principal Component Analysis (PCA).</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I5.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I5.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">3D Morphable Models (3DMM)</span>: To create and manipulate 3D face geometry.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS2.p3">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Algorithms</span>:</p>
+<ul class="ltx_itemize" id="S1.I6">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I6.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I6.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">PCA</span>: To extract the 50-dimensional eigenvalue representation.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I6.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I6.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Non-linear optimization</span>: For fitting the 3D model to the detected face.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsubsection" id="S1.SS3.SSS3">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.3.3 </span>Face Distortion Module</h4>
+<div class="ltx_para" id="S1.SS3.SSS3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Function</span>: Alters facial features by modifying the eigenvalues to simulate the perceptual distortions experienced in prosopagnosia.</p>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS3.p2">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Technologies</span>:</p>
+<ul class="ltx_itemize" id="S1.I7">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I7.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I7.i1.p1">
+<p class="ltx_p">Custom algorithms based on FFA neural encoding studies.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS3.p3">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Algorithms</span>:</p>
+<ul class="ltx_itemize" id="S1.I8">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I8.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I8.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Eigenvalue Manipulation</span>: Adjusting eigenvalues to distort facial features while maintaining realism.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I8.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I8.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Neural Style Transfer</span>: As an alternative to apply perceptual changes.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsubsection" id="S1.SS3.SSS4">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.3.4 </span>Rendering Module</h4>
+<div class="ltx_para" id="S1.SS3.SSS4.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Function</span>: Integrates the distorted faces back into the video feed and renders the augmented reality scene.</p>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS4.p2">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Technologies</span>:</p>
+<ul class="ltx_itemize" id="S1.I9">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I9.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I9.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Unity3D</span> or <span class="ltx_text ltx_font_bold">Unreal Engine</span>: For AR rendering.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I9.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I9.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">ARCore</span> or <span class="ltx_text ltx_font_bold">ARKit</span>: Depending on the AR headset compatibility.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS4.p3">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Algorithms</span>:</p>
+<ul class="ltx_itemize" id="S1.I10">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I10.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I10.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Shader Programming</span>: For real-time rendering effects.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I10.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I10.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Texture Mapping</span>: To overlay the altered face onto the original.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsubsection" id="S1.SS3.SSS5">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.3.5 </span>User Interface Module</h4>
+<div class="ltx_para" id="S1.SS3.SSS5.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Function</span>: Manages user interactions and displays contextual information.</p>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS5.p2">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Technologies</span>:</p>
+<ul class="ltx_itemize" id="S1.I11">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I11.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I11.i1.p1">
+<p class="ltx_p">Cross-platform UI frameworks such as <span class="ltx_text ltx_font_bold">Qt</span> or <span class="ltx_text ltx_font_bold">Unity UI</span>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS5.p3">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Features</span>:</p>
+<ul class="ltx_itemize" id="S1.I12">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I12.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I12.i1.p1">
+<p class="ltx_p">Menu systems for settings.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I12.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I12.i2.p1">
+<p class="ltx_p">Visual cues or instructions for participants.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsubsection" id="S1.SS3.SSS6">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.3.6 </span>Networking Module (If Offloading Processing)</h4>
+<div class="ltx_para" id="S1.SS3.SSS6.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Function</span>: Handles data transmission between the AR headset and the local server.</p>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS6.p2">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Technologies</span>:</p>
+<ul class="ltx_itemize" id="S1.I13">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I13.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I13.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">WebSockets</span> or <span class="ltx_text ltx_font_bold">gRPC</span>: For real-time communication.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I13.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I13.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">UDP Protocol</span>: For low-latency data transfer.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS6.p3">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Security</span>:</p>
+<ul class="ltx_itemize" id="S1.I14">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I14.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I14.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Encryption</span>: SSL/TLS protocols to secure data transmission.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsubsection" id="S1.SS3.SSS7">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">1.3.7 </span>g. Latency Optimization Module</h4>
+<div class="ltx_para" id="S1.SS3.SSS7.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Function</span>: Ensures that the total processing time remains within the 20 ms target.</p>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS7.p2">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Technologies</span>:</p>
+<ul class="ltx_itemize" id="S1.I15">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I15.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I15.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Multi-threading</span>: To parallelize tasks.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I15.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I15.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">GPU Acceleration</span>: Utilizing shaders and compute shaders.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S1.SS3.SSS7.p3">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Strategies</span>:</p>
+<ul class="ltx_itemize" id="S1.I16">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I16.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I16.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Algorithm Optimization</span>: Simplifying models without significant loss of quality.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I16.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I16.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Asynchronous Processing</span>: Decoupling processing steps to prevent bottlenecks.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="S1.SS4">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.4 </span>Latency Reduction Techniques</h3>
+<div class="ltx_para" id="S1.SS4.p1">
+<ul class="ltx_itemize" id="S1.I17">
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I17.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I17.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">On-Device Processing</span>: Utilize the AR headset’s GPU for parallel computations.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I17.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I17.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Model Compression</span>: Use quantization and pruning on neural networks.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I17.i3">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I17.i3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Efficient Algorithms</span>: Implement lightweight versions of face detection and recognition algorithms.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S1.I17.i4">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S1.I17.i4.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Edge Computing</span>: Deploy edge servers close to the user to reduce network latency if offloading is necessary.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</section>
+<section class="ltx_section" id="S2">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Hardware Architecture</h2>
+<section class="ltx_subsection" id="S2.SS1">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span>AR Headset Specifications</h3>
+<div class="ltx_para" id="S2.SS1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Device Requirements</span>:</p>
+<ul class="ltx_itemize" id="S2.I1">
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I1.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I1.i1.p1">
+<p class="ltx_p">High-resolution camera(s) for video capture.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I1.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I1.i2.p1">
+<p class="ltx_p">Powerful GPU for real-time rendering and processing.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I1.i3">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I1.i3.p1">
+<p class="ltx_p">Sufficient RAM and storage.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S2.SS1.p2">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Suggested Devices</span>:</p>
+<ul class="ltx_itemize" id="S2.I2">
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I2.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I2.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Microsoft HoloLens 2</span></p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I2.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I2.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Magic Leap 2</span></p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I2.i3">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I2.i3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Meta Quest Pro</span></p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsection" id="S2.SS2">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2 </span>Processing Capabilities</h3>
+<section class="ltx_subsubsection" id="S2.SS2.SSS1">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">2.2.1 </span>On-Device Processing</h4>
+<div class="ltx_para" id="S2.SS2.SSS1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Advantages</span>:</p>
+<ul class="ltx_itemize" id="S2.I3">
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I3.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I3.i1.p1">
+<p class="ltx_p">Reduced latency due to elimination of network delays.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I3.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I3.i2.p1">
+<p class="ltx_p">Increased privacy as data is processed locally.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S2.SS2.SSS1.p2">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Limitations</span>:</p>
+<ul class="ltx_itemize" id="S2.I4">
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I4.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I4.i1.p1">
+<p class="ltx_p">Limited computational resources compared to servers.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I4.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I4.i2.p1">
+<p class="ltx_p">Potential thermal constraints.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsubsection" id="S2.SS2.SSS2">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">2.2.2 </span>Offloading to Local Server</h4>
+<div class="ltx_para" id="S2.SS2.SSS2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Server Specifications</span>:</p>
+<ul class="ltx_itemize" id="S2.I5">
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I5.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I5.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">GPU</span>: NVIDIA RTX series or equivalent for deep learning tasks.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I5.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I5.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">TPU</span>: Tensor Processing Units if compatible.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I5.i3">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I5.i3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">CPU</span>: Multi-core processors for handling multiple threads.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S2.SS2.SSS2.p2">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Network Architecture</span>:</p>
+<ul class="ltx_itemize" id="S2.I6">
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I6.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I6.i1.p1">
+<p class="ltx_p">High-speed local network (Ethernet or Wi-Fi 6).</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I6.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I6.i2.p1">
+<p class="ltx_p">Dedicated router to prioritize traffic.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="S2.SS3">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.3 </span>Networking Considerations</h3>
+<div class="ltx_para" id="S2.SS3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Latency</span>:</p>
+<ul class="ltx_itemize" id="S2.I7">
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I7.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I7.i1.p1">
+<p class="ltx_p">Target end-to-end latency of less than 20 ms.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I7.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I7.i2.p1">
+<p class="ltx_p">Use of <span class="ltx_text ltx_font_bold">Quality of Service (QoS)</span> settings to prioritize AR data.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S2.SS3.p2">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Bandwidth</span>:</p>
+<ul class="ltx_itemize" id="S2.I8">
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I8.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I8.i1.p1">
+<p class="ltx_p">Sufficient to handle high-resolution video streams.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S2.SS3.p3">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Reliability</span>:</p>
+<ul class="ltx_itemize" id="S2.I9">
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I9.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I9.i1.p1">
+<p class="ltx_p">Redundant network paths if possible.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S2.SS3.p4">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Security</span>:</p>
+<ul class="ltx_itemize" id="S2.I10">
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I10.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I10.i1.p1">
+<p class="ltx_p">Secure Wi-Fi networks with strong encryption.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsection" id="S2.SS4">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.4 </span>Integration of Hardware Components</h3>
+<div class="ltx_para" id="S2.SS4.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Camera Systems</span>:</p>
+<ul class="ltx_itemize" id="S2.I11">
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I11.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I11.i1.p1">
+<p class="ltx_p">Integrated with the AR headset for seamless video capture.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S2.SS4.p2">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Sensors</span>:</p>
+<ul class="ltx_itemize" id="S2.I12">
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I12.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I12.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">IMUs</span> (Inertial Measurement Units) for motion tracking.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I12.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I12.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Depth Sensors</span>: Optional, for improved 3D modeling.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ltx_para" id="S2.SS4.p3">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Wearable Computing</span>:</p>
+<ul class="ltx_itemize" id="S2.I13">
+<li class="ltx_item ltxs-list-style-type-none" id="S2.I13.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S2.I13.i1.p1">
+<p class="ltx_p">Lightweight and ergonomically designed for comfort during extended use.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</section>
+<section class="ltx_section" id="S3">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Implementation Considerations</h2>
+<section class="ltx_subsection" id="S3.SS1">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.1 </span>Scalability and Flexibility</h3>
+<div class="ltx_para" id="S3.SS1.p1">
+<ul class="ltx_itemize" id="S3.I1">
+<li class="ltx_item ltxs-list-style-type-none" id="S3.I1.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S3.I1.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Modular Design</span>: Allows for components to be updated or replaced without overhauling the entire system.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S3.I1.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S3.I1.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Cross-Platform Compatibility</span>: Development using platforms that support multiple devices (e.g., Unity3D).</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S3.I1.i3">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S3.I1.i3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Future-Proofing</span>: Designing with future technological advancements in mind.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsection" id="S3.SS2">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.2 </span>Real-Time Processing Challenges</h3>
+<div class="ltx_para" id="S3.SS2.p1">
+<ul class="ltx_itemize" id="S3.I2">
+<li class="ltx_item ltxs-list-style-type-none" id="S3.I2.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S3.I2.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Data Throughput</span>: Ensuring the system can handle the data rates required for high-resolution video.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S3.I2.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S3.I2.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Synchronization</span>: Keeping all processing modules in sync to prevent visual artifacts.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S3.I2.i3">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S3.I2.i3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Error Handling</span>: Robust methods to handle failures without disrupting the user experience.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsection" id="S3.SS3">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.3 </span>Privacy and Ethical Considerations</h3>
+<div class="ltx_para" id="S3.SS3.p1">
+<ul class="ltx_itemize" id="S3.I3">
+<li class="ltx_item ltxs-list-style-type-none" id="S3.I3.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S3.I3.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Data Management</span>: Ensuring that facial data is not stored unnecessarily.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S3.I3.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S3.I3.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">User Consent</span>: Informing participants about the data processing involved.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S3.I3.i3">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S3.I3.i3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Compliance</span>: Adhering to data protection regulations (e.g., GDPR).</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</section>
+<section class="ltx_section" id="S4">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Exhibit Setup Considerations</h2>
+<section class="ltx_subsection" id="S4.SS1">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.1 </span>Participant Experience Design</h3>
+<div class="ltx_para" id="S4.SS1.p1">
+<ul class="ltx_itemize" id="S4.I1">
+<li class="ltx_item ltxs-list-style-type-none" id="S4.I1.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S4.I1.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Controlled Environment</span>: A designated area where lighting and background conditions are optimal.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S4.I1.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S4.I1.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Wearables</span>: Provision of uniform robes and headgear to minimize recognition based on non-facial features.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S4.I1.i3">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S4.I1.i3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Rotation System</span>: Scheduling to ensure participants experience both known and unknown faces.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S4.I1.i4">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S4.I1.i4.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Data Gathering</span>: Data will be gathered to measure the participants’ expriences using psychometrics such as <cite class="ltx_cite ltx_citemacro_cite">[<a class="ltx_ref" href="#bib.bib2" title="Holistic face training enhances face processing in developmental prosopagnosia">DCN14</a>]</cite> <cite class="ltx_cite ltx_citemacro_cite">[<a class="ltx_ref" href="#bib.bib3" title="The cambridge face memory test: results for neurologically intact individuals and an investigation of its validity using inverted face stimuli and prosopagnosic participants">DN06</a>]</cite></p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsection" id="S4.SS2">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.2 </span>Hardware Deployment</h3>
+<div class="ltx_para" id="S4.SS2.p1">
+<ul class="ltx_itemize" id="S4.I2">
+<li class="ltx_item ltxs-list-style-type-none" id="S4.I2.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S4.I2.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">AR Headsets</span>: Multiple units for simultaneous use by small groups.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S4.I2.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S4.I2.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Local Servers</span>: Positioned to minimize network latency, possibly within the exhibit space.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S4.I2.i3">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S4.I2.i3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Networking Equipment</span>: High-performance routers and switches dedicated to the exhibit.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsection" id="S4.SS3">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.3 </span>Support Infrastructure</h3>
+<div class="ltx_para" id="S4.SS3.p1">
+<ul class="ltx_itemize" id="S4.I3">
+<li class="ltx_item ltxs-list-style-type-none" id="S4.I3.i1">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S4.I3.i1.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Technical Staff</span>: On-site personnel to assist with equipment and troubleshoot issues.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S4.I3.i2">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S4.I3.i2.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Educational Materials</span>: Contextual placards or videos explaining the experience.</p>
+</div>
+</li>
+<li class="ltx_item ltxs-list-style-type-none" id="S4.I3.i3">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="S4.I3.i3.p1">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Feedback Mechanisms</span>: Tablets or kiosks for participants to complete surveys post-experience.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</section>
+<section class="ltx_section" id="S5">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Conclusion</h2>
+<div class="ltx_para" id="S5.p1">
+<p class="ltx_p">The proposed software and hardware architecture leverages cutting-edge technologies in computer vision, machine learning, and augmented reality to create an immersive simulation of prosopagnosia. By carefully balancing on-device processing with potential server-side support, the system is designed to meet the stringent latency requirements essential for a seamless user experience. The modular design ensures scalability and adaptability, allowing for future enhancements and the potential incorporation of additional perceptual disorder simulations.</p>
+</div>
+<div class="ltx_para" id="S5.p2">
+<p class="ltx_p">This architecture not only serves the immediate goals of the project but also lays the groundwork for future research and development in assistive AR technologies and educational tools that foster empathy and understanding of perceptual diversity.</p>
+</div>
+</section>
+<section class="ltx_bibliography" id="bib">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+<ul class="ltx_biblist" id="bib.L1">
+<li class="ltx_bibitem ltx_bib_article" id="bib.bib1">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[CT17]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">L. Chang and D. Y. Tsao</span><span class="ltx_text ltx_bib_year"> (2017-09)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The code for facial identity in the primate brain</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Cell</span> <span class="ltx_text ltx_bib_volume">169</span> (<span class="ltx_text ltx_bib_number">6</span>), <span class="ltx_text ltx_bib_pages"> pp. 1013–1028.e14</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a class="ltx_ref doi ltx_bib_external" href="https://dx.doi.org/10.1016/j.cell.2017.05.011" title="">Document</a>,
+<span class="ltx_text issn ltx_bib_external">ISSN 0092-8674</span>,
+<a class="ltx_ref ltx_bib_external" href="https://doi.org/10.1016/j.cell.2017.05.011" title="">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a class="ltx_ref" href="#S1.SS3.SSS2.p1" title="1.3.2 Face Representation and Modeling Module ‣ 1.3 Detailed Component Description ‣ 1 Software Architecture ‣ Software and Hardware Architecture Proposal for “Using Augmented Reality to Experience Prosopagnosia”"><span class="ltx_text ltx_ref_tag">§1.3.2</span></a>.
+</span>
+</li>
+<li class="ltx_bibitem ltx_bib_article" id="bib.bib2">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[DCN14]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. DeGutis, S. Cohan, and K. Nakayama</span><span class="ltx_text ltx_bib_year"> (2014-03)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Holistic face training enhances face processing in developmental prosopagnosia</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Brain</span> <span class="ltx_text ltx_bib_volume">137</span> (<span class="ltx_text ltx_bib_number">6</span>), <span class="ltx_text ltx_bib_pages"> pp. 1781–1798</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0006-8950</span>,
+<a class="ltx_ref doi ltx_bib_external" href="https://dx.doi.org/10.1093/brain/awu062" title="">Document</a>,
+<a class="ltx_ref ltx_bib_external" href="https://doi.org/10.1093/brain/awu062" title="">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a class="ltx_ref" href="#S4.I1.i4.p1" title="In 4.1 Participant Experience Design ‣ 4 Exhibit Setup Considerations ‣ Software and Hardware Architecture Proposal for “Using Augmented Reality to Experience Prosopagnosia”"><span class="ltx_text ltx_ref_tag">4th item</span></a>.
+</span>
+</li>
+<li class="ltx_bibitem ltx_bib_article" id="bib.bib3">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[DN06]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">B. Duchaine and K. Nakayama</span><span class="ltx_text ltx_bib_year"> (2006)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The cambridge face memory test: results for neurologically intact individuals and an investigation of its validity using inverted face stimuli and prosopagnosic participants</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Neuropsychologia</span> <span class="ltx_text ltx_bib_volume">44</span> (<span class="ltx_text ltx_bib_number">4</span>), <span class="ltx_text ltx_bib_pages"> pp. 576–585</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a class="ltx_ref" href="#S4.I1.i4.p1" title="In 4.1 Participant Experience Design ‣ 4 Exhibit Setup Considerations ‣ Software and Hardware Architecture Proposal for “Using Augmented Reality to Experience Prosopagnosia”"><span class="ltx_text ltx_ref_tag">4th item</span></a>.
+</span>
+</li>
+</ul>
+</section>
+</article>
+</div>
 
-            <div id="Sx1.p1" class="ltx_para">
-              <p class="ltx_p">
-                This proposal outlines a comprehensive software and hardware
-                architecture to implement an augmented reality (AR) system that
-                simulates the subjective experience of prosopagnosia (face
-                blindness). The system aims to manipulate live video feeds by
-                altering facial features in real-time, based on neural models of
-                face recognition, specifically those in the fusiform face area
-                (FFA). The primary goal is to create an immersive experience
-                that accurately reflects the perceptual challenges faced by
-                individuals with prosopagnosia.
-              </p>
-            </div>
-          </section>
-          <section id="Sx2" class="ltx_section">
-            <h2 class="ltx_title ltx_title_section">
-              Overview of the Proposed Architecture
-            </h2>
-
-            <div id="Sx2.p1" class="ltx_para">
-              <p class="ltx_p">
-                The system comprises both on-device and server-side components
-                to achieve real-time performance with minimal latency. It
-                utilizes advanced computer vision and machine learning
-                algorithms to detect, model, and alter faces within a live video
-                stream. The architecture is designed to be scalable, modular,
-                and optimized for real-time processing, ensuring an immersive
-                and seamless user experience.
-              </p>
-            </div>
-          </section>
-          <section id="S1" class="ltx_section">
-            <h2 class="ltx_title ltx_title_section">
-              <span class="ltx_tag ltx_tag_section">1 </span>Software
-              Architecture
-            </h2>
-
-            <section id="S1.SS1" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">1.1 </span>Software
-                Components Overview
-              </h3>
-
-              <div id="S1.SS1.p1" class="ltx_para">
-                <ul id="S1.I1" class="ltx_itemize">
-                  <li
-                    id="S1.I1.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S1.I1.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Face Detection and Tracking Module</span
-                        >
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I1.i2"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S1.I1.i2.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Face Representation and Modeling Module</span
-                        >
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I1.i3"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S1.I1.i3.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Face Distortion Module</span
-                        >
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I1.i4"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S1.I1.i4.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Rendering Module</span
-                        >
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I1.i5"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S1.I1.i5.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >User Interface Module</span
-                        >
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I1.i6"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S1.I1.i6.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Networking Module (if offloading processing)</span
-                        >
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I1.i7"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S1.I1.i7.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Latency Optimization Module</span
-                        >
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <section id="S1.SS2" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">1.2 </span>Data Flow
-                and Processing Pipeline
-              </h3>
-
-              <div id="S1.SS2.p1" class="ltx_para">
-                <ol id="S1.I2" class="ltx_enumerate">
-                  <li
-                    id="S1.I2.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">1.</span>
-                    <div id="S1.I2.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold">Video Capture</span
-                        >: The AR headset’s camera captures live video feeds.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I2.i2"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">2.</span>
-                    <div id="S1.I2.i2.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Face Detection and Tracking</span
-                        >: Real-time detection of frontal faces and tracking
-                        their positions in successive frames.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I2.i3"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">3.</span>
-                    <div id="S1.I2.i3.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Face Representation and Modeling</span
-                        >: Generation of 3D face models and extraction of a
-                        50-dimensional eigenvalue representation based on FFA
-                        neural models.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I2.i4"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">4.</span>
-                    <div id="S1.I2.i4.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Face Distortion</span
-                        >: Alteration of facial features by modifying the
-                        eigenvalues to simulate prosopagnosia.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I2.i5"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">5.</span>
-                    <div id="S1.I2.i5.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold">Rendering</span>:
-                        Overlay of the distorted faces onto the original video
-                        feed in real-time.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I2.i6"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">6.</span>
-                    <div id="S1.I2.i6.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold">Display</span>:
-                        Presentation of the augmented video feed to the user
-                        through the AR headset.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I2.i7"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">7.</span>
-                    <div id="S1.I2.i7.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >User Interaction and Feedback</span
-                        >: Optional modules for user input and experience
-                        surveys.
-                      </p>
-                    </div>
-                  </li>
-                </ol>
-              </div>
-            </section>
-            <section id="S1.SS3" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">1.3 </span>Detailed
-                Component Description
-              </h3>
-
-              <section id="S1.SS3.SSS1" class="ltx_subsubsection">
-                <h4 class="ltx_title ltx_title_subsubsection">
-                  <span class="ltx_tag ltx_tag_subsubsection">1.3.1 </span>Face
-                  Detection and Tracking Module
-                </h4>
-
-                <div id="S1.SS3.SSS1.p1" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Function</span>:
-                    Detects faces in real-time from the video feed and tracks
-                    them across frames.
-                  </p>
-                </div>
-                <div id="S1.SS3.SSS1.p2" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Technologies</span>:
-                  </p>
-                  <ul id="S1.I3" class="ltx_itemize">
-                    <li
-                      id="S1.I3.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I3.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold">OpenCV</span>:
-                          For initial face detection using Haar Cascades or
-                          DNN-based detectors.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S1.I3.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I3.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold">Dlib</span>: For
-                          facial landmark detection.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S1.I3.i3"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I3.i3.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >TensorFlow Lite</span
-                          >
-                          or
-                          <span class="ltx_text ltx_font_bold"
-                            >ONNX Runtime</span
-                          >: For optimized neural network inference on mobile
-                          devices.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div id="S1.SS3.SSS1.p3" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Algorithms</span>:
-                  </p>
-                  <ul id="S1.I4" class="ltx_itemize">
-                    <li
-                      id="S1.I4.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I4.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >Multi-task Cascaded Convolutional Networks
-                            (MTCNN)</span
-                          >
-                          for face detection.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S1.I4.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I4.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >Kalman Filters</span
-                          >
-                          or
-                          <span class="ltx_text ltx_font_bold"
-                            >Optical Flow</span
-                          >
-                          for tracking.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-              <section id="S1.SS3.SSS2" class="ltx_subsubsection">
-                <h4 class="ltx_title ltx_title_subsubsection">
-                  <span class="ltx_tag ltx_tag_subsubsection">1.3.2 </span>Face
-                  Representation and Modeling Module
-                </h4>
-
-                <div id="S1.SS3.SSS2.p1" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Function</span>:
-                    Generates 3D face models and computes the eigenvalue
-                    representation of facial features.
-                    <cite class="ltx_cite ltx_citemacro_cite"
-                      >[<a
-                        href="#bib.bib1"
-                        title="The code for facial identity in the primate brain"
-                        class="ltx_ref"
-                        >CT17</a
-                      >]</cite
-                    >
-                  </p>
-                </div>
-                <div id="S1.SS3.SSS2.p2" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Technologies</span>:
-                  </p>
-                  <ul id="S1.I5" class="ltx_itemize">
-                    <li
-                      id="S1.I5.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I5.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >Eigenfaces Method</span
-                          >: For face representation using Principal Component
-                          Analysis (PCA).
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S1.I5.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I5.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >3D Morphable Models (3DMM)</span
-                          >: To create and manipulate 3D face geometry.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div id="S1.SS3.SSS2.p3" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Algorithms</span>:
-                  </p>
-                  <ul id="S1.I6" class="ltx_itemize">
-                    <li
-                      id="S1.I6.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I6.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold">PCA</span>: To
-                          extract the 50-dimensional eigenvalue representation.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S1.I6.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I6.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >Non-linear optimization</span
-                          >: For fitting the 3D model to the detected face.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-              <section id="S1.SS3.SSS3" class="ltx_subsubsection">
-                <h4 class="ltx_title ltx_title_subsubsection">
-                  <span class="ltx_tag ltx_tag_subsubsection">1.3.3 </span>Face
-                  Distortion Module
-                </h4>
-
-                <div id="S1.SS3.SSS3.p1" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Function</span>: Alters
-                    facial features by modifying the eigenvalues to simulate the
-                    perceptual distortions experienced in prosopagnosia.
-                  </p>
-                </div>
-                <div id="S1.SS3.SSS3.p2" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Technologies</span>:
-                  </p>
-                  <ul id="S1.I7" class="ltx_itemize">
-                    <li
-                      id="S1.I7.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I7.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          Custom algorithms based on FFA neural encoding
-                          studies.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div id="S1.SS3.SSS3.p3" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Algorithms</span>:
-                  </p>
-                  <ul id="S1.I8" class="ltx_itemize">
-                    <li
-                      id="S1.I8.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I8.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >Eigenvalue Manipulation</span
-                          >: Adjusting eigenvalues to distort facial features
-                          while maintaining realism.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S1.I8.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I8.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >Neural Style Transfer</span
-                          >: As an alternative to apply perceptual changes.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-              <section id="S1.SS3.SSS4" class="ltx_subsubsection">
-                <h4 class="ltx_title ltx_title_subsubsection">
-                  <span class="ltx_tag ltx_tag_subsubsection">1.3.4 </span
-                  >Rendering Module
-                </h4>
-
-                <div id="S1.SS3.SSS4.p1" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Function</span>:
-                    Integrates the distorted faces back into the video feed and
-                    renders the augmented reality scene.
-                  </p>
-                </div>
-                <div id="S1.SS3.SSS4.p2" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Technologies</span>:
-                  </p>
-                  <ul id="S1.I9" class="ltx_itemize">
-                    <li
-                      id="S1.I9.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I9.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold">Unity3D</span> or
-                          <span class="ltx_text ltx_font_bold"
-                            >Unreal Engine</span
-                          >: For AR rendering.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S1.I9.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I9.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold">ARCore</span> or
-                          <span class="ltx_text ltx_font_bold">ARKit</span>:
-                          Depending on the AR headset compatibility.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div id="S1.SS3.SSS4.p3" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Algorithms</span>:
-                  </p>
-                  <ul id="S1.I10" class="ltx_itemize">
-                    <li
-                      id="S1.I10.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I10.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >Shader Programming</span
-                          >: For real-time rendering effects.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S1.I10.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I10.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >Texture Mapping</span
-                          >: To overlay the altered face onto the original.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-              <section id="S1.SS3.SSS5" class="ltx_subsubsection">
-                <h4 class="ltx_title ltx_title_subsubsection">
-                  <span class="ltx_tag ltx_tag_subsubsection">1.3.5 </span>User
-                  Interface Module
-                </h4>
-
-                <div id="S1.SS3.SSS5.p1" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Function</span>:
-                    Manages user interactions and displays contextual
-                    information.
-                  </p>
-                </div>
-                <div id="S1.SS3.SSS5.p2" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Technologies</span>:
-                  </p>
-                  <ul id="S1.I11" class="ltx_itemize">
-                    <li
-                      id="S1.I11.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I11.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          Cross-platform UI frameworks such as
-                          <span class="ltx_text ltx_font_bold">Qt</span> or
-                          <span class="ltx_text ltx_font_bold">Unity UI</span>.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div id="S1.SS3.SSS5.p3" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Features</span>:
-                  </p>
-                  <ul id="S1.I12" class="ltx_itemize">
-                    <li
-                      id="S1.I12.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I12.i1.p1" class="ltx_para">
-                        <p class="ltx_p">Menu systems for settings.</p>
-                      </div>
-                    </li>
-                    <li
-                      id="S1.I12.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I12.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          Visual cues or instructions for participants.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-              <section id="S1.SS3.SSS6" class="ltx_subsubsection">
-                <h4 class="ltx_title ltx_title_subsubsection">
-                  <span class="ltx_tag ltx_tag_subsubsection">1.3.6 </span
-                  >Networking Module (If Offloading Processing)
-                </h4>
-
-                <div id="S1.SS3.SSS6.p1" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Function</span>:
-                    Handles data transmission between the AR headset and the
-                    local server.
-                  </p>
-                </div>
-                <div id="S1.SS3.SSS6.p2" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Technologies</span>:
-                  </p>
-                  <ul id="S1.I13" class="ltx_itemize">
-                    <li
-                      id="S1.I13.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I13.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold">WebSockets</span>
-                          or <span class="ltx_text ltx_font_bold">gRPC</span>:
-                          For real-time communication.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S1.I13.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I13.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >UDP Protocol</span
-                          >: For low-latency data transfer.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div id="S1.SS3.SSS6.p3" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Security</span>:
-                  </p>
-                  <ul id="S1.I14" class="ltx_itemize">
-                    <li
-                      id="S1.I14.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I14.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold">Encryption</span
-                          >: SSL/TLS protocols to secure data transmission.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-              <section id="S1.SS3.SSS7" class="ltx_subsubsection">
-                <h4 class="ltx_title ltx_title_subsubsection">
-                  <span class="ltx_tag ltx_tag_subsubsection">1.3.7 </span>g.
-                  Latency Optimization Module
-                </h4>
-
-                <div id="S1.SS3.SSS7.p1" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Function</span>:
-                    Ensures that the total processing time remains within the
-                    20 ms target.
-                  </p>
-                </div>
-                <div id="S1.SS3.SSS7.p2" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Technologies</span>:
-                  </p>
-                  <ul id="S1.I15" class="ltx_itemize">
-                    <li
-                      id="S1.I15.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I15.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >Multi-threading</span
-                          >: To parallelize tasks.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S1.I15.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I15.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >GPU Acceleration</span
-                          >: Utilizing shaders and compute shaders.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div id="S1.SS3.SSS7.p3" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Strategies</span>:
-                  </p>
-                  <ul id="S1.I16" class="ltx_itemize">
-                    <li
-                      id="S1.I16.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I16.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >Algorithm Optimization</span
-                          >: Simplifying models without significant loss of
-                          quality.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S1.I16.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S1.I16.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold"
-                            >Asynchronous Processing</span
-                          >: Decoupling processing steps to prevent bottlenecks.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-            </section>
-            <section id="S1.SS4" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">1.4 </span>Latency
-                Reduction Techniques
-              </h3>
-
-              <div id="S1.SS4.p1" class="ltx_para">
-                <ul id="S1.I17" class="ltx_itemize">
-                  <li
-                    id="S1.I17.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S1.I17.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >On-Device Processing</span
-                        >: Utilize the AR headset’s GPU for parallel
-                        computations.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I17.i2"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S1.I17.i2.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Model Compression</span
-                        >: Use quantization and pruning on neural networks.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I17.i3"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S1.I17.i3.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Efficient Algorithms</span
-                        >: Implement lightweight versions of face detection and
-                        recognition algorithms.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S1.I17.i4"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S1.I17.i4.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Edge Computing</span
-                        >: Deploy edge servers close to the user to reduce
-                        network latency if offloading is necessary.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </section>
-          <section id="S2" class="ltx_section">
-            <h2 class="ltx_title ltx_title_section">
-              <span class="ltx_tag ltx_tag_section">2 </span>Hardware
-              Architecture
-            </h2>
-
-            <section id="S2.SS1" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">2.1 </span>AR Headset
-                Specifications
-              </h3>
-
-              <div id="S2.SS1.p1" class="ltx_para">
-                <p class="ltx_p">
-                  <span class="ltx_text ltx_font_bold">Device Requirements</span
-                  >:
-                </p>
-                <ul id="S2.I1" class="ltx_itemize">
-                  <li
-                    id="S2.I1.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I1.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        High-resolution camera(s) for video capture.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S2.I1.i2"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I1.i2.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        Powerful GPU for real-time rendering and processing.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S2.I1.i3"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I1.i3.p1" class="ltx_para">
-                      <p class="ltx_p">Sufficient RAM and storage.</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div id="S2.SS1.p2" class="ltx_para">
-                <p class="ltx_p">
-                  <span class="ltx_text ltx_font_bold">Suggested Devices</span>:
-                </p>
-                <ul id="S2.I2" class="ltx_itemize">
-                  <li
-                    id="S2.I2.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I2.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Microsoft HoloLens 2</span
-                        >
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S2.I2.i2"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I2.i2.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold">Magic Leap 2</span>
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S2.I2.i3"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I2.i3.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Meta Quest Pro</span
-                        >
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <section id="S2.SS2" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">2.2 </span>Processing
-                Capabilities
-              </h3>
-
-              <section id="S2.SS2.SSS1" class="ltx_subsubsection">
-                <h4 class="ltx_title ltx_title_subsubsection">
-                  <span class="ltx_tag ltx_tag_subsubsection">2.2.1 </span
-                  >On-Device Processing
-                </h4>
-
-                <div id="S2.SS2.SSS1.p1" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Advantages</span>:
-                  </p>
-                  <ul id="S2.I3" class="ltx_itemize">
-                    <li
-                      id="S2.I3.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S2.I3.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          Reduced latency due to elimination of network delays.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S2.I3.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S2.I3.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          Increased privacy as data is processed locally.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div id="S2.SS2.SSS1.p2" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold">Limitations</span>:
-                  </p>
-                  <ul id="S2.I4" class="ltx_itemize">
-                    <li
-                      id="S2.I4.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S2.I4.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          Limited computational resources compared to servers.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S2.I4.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S2.I4.i2.p1" class="ltx_para">
-                        <p class="ltx_p">Potential thermal constraints.</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-              <section id="S2.SS2.SSS2" class="ltx_subsubsection">
-                <h4 class="ltx_title ltx_title_subsubsection">
-                  <span class="ltx_tag ltx_tag_subsubsection">2.2.2 </span
-                  >Offloading to Local Server
-                </h4>
-
-                <div id="S2.SS2.SSS2.p1" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold"
-                      >Server Specifications</span
-                    >:
-                  </p>
-                  <ul id="S2.I5" class="ltx_itemize">
-                    <li
-                      id="S2.I5.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S2.I5.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold">GPU</span>:
-                          NVIDIA RTX series or equivalent for deep learning
-                          tasks.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S2.I5.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S2.I5.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold">TPU</span>:
-                          Tensor Processing Units if compatible.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S2.I5.i3"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S2.I5.i3.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          <span class="ltx_text ltx_font_bold">CPU</span>:
-                          Multi-core processors for handling multiple threads.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div id="S2.SS2.SSS2.p2" class="ltx_para">
-                  <p class="ltx_p">
-                    <span class="ltx_text ltx_font_bold"
-                      >Network Architecture</span
-                    >:
-                  </p>
-                  <ul id="S2.I6" class="ltx_itemize">
-                    <li
-                      id="S2.I6.i1"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S2.I6.i1.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          High-speed local network (Ethernet or Wi-Fi 6).
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      id="S2.I6.i2"
-                      class="ltx_item"
-                      style="list-style-type: none"
-                    >
-                      <span class="ltx_tag ltx_tag_item">•</span>
-                      <div id="S2.I6.i2.p1" class="ltx_para">
-                        <p class="ltx_p">
-                          Dedicated router to prioritize traffic.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-            </section>
-            <section id="S2.SS3" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">2.3 </span>Networking
-                Considerations
-              </h3>
-
-              <div id="S2.SS3.p1" class="ltx_para">
-                <p class="ltx_p">
-                  <span class="ltx_text ltx_font_bold">Latency</span>:
-                </p>
-                <ul id="S2.I7" class="ltx_itemize">
-                  <li
-                    id="S2.I7.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I7.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        Target end-to-end latency of less than 20 ms.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S2.I7.i2"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I7.i2.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        Use of
-                        <span class="ltx_text ltx_font_bold"
-                          >Quality of Service (QoS)</span
-                        >
-                        settings to prioritize AR data.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div id="S2.SS3.p2" class="ltx_para">
-                <p class="ltx_p">
-                  <span class="ltx_text ltx_font_bold">Bandwidth</span>:
-                </p>
-                <ul id="S2.I8" class="ltx_itemize">
-                  <li
-                    id="S2.I8.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I8.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        Sufficient to handle high-resolution video streams.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div id="S2.SS3.p3" class="ltx_para">
-                <p class="ltx_p">
-                  <span class="ltx_text ltx_font_bold">Reliability</span>:
-                </p>
-                <ul id="S2.I9" class="ltx_itemize">
-                  <li
-                    id="S2.I9.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I9.i1.p1" class="ltx_para">
-                      <p class="ltx_p">Redundant network paths if possible.</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div id="S2.SS3.p4" class="ltx_para">
-                <p class="ltx_p">
-                  <span class="ltx_text ltx_font_bold">Security</span>:
-                </p>
-                <ul id="S2.I10" class="ltx_itemize">
-                  <li
-                    id="S2.I10.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I10.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        Secure Wi-Fi networks with strong encryption.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <section id="S2.SS4" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">2.4 </span>Integration
-                of Hardware Components
-              </h3>
-
-              <div id="S2.SS4.p1" class="ltx_para">
-                <p class="ltx_p">
-                  <span class="ltx_text ltx_font_bold">Camera Systems</span>:
-                </p>
-                <ul id="S2.I11" class="ltx_itemize">
-                  <li
-                    id="S2.I11.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I11.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        Integrated with the AR headset for seamless video
-                        capture.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div id="S2.SS4.p2" class="ltx_para">
-                <p class="ltx_p">
-                  <span class="ltx_text ltx_font_bold">Sensors</span>:
-                </p>
-                <ul id="S2.I12" class="ltx_itemize">
-                  <li
-                    id="S2.I12.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I12.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold">IMUs</span>
-                        (Inertial Measurement Units) for motion tracking.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S2.I12.i2"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I12.i2.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold">Depth Sensors</span
-                        >: Optional, for improved 3D modeling.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div id="S2.SS4.p3" class="ltx_para">
-                <p class="ltx_p">
-                  <span class="ltx_text ltx_font_bold">Wearable Computing</span
-                  >:
-                </p>
-                <ul id="S2.I13" class="ltx_itemize">
-                  <li
-                    id="S2.I13.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S2.I13.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        Lightweight and ergonomically designed for comfort
-                        during extended use.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </section>
-          <section id="S3" class="ltx_section">
-            <h2 class="ltx_title ltx_title_section">
-              <span class="ltx_tag ltx_tag_section">3 </span>Implementation
-              Considerations
-            </h2>
-
-            <section id="S3.SS1" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">3.1 </span>Scalability
-                and Flexibility
-              </h3>
-
-              <div id="S3.SS1.p1" class="ltx_para">
-                <ul id="S3.I1" class="ltx_itemize">
-                  <li
-                    id="S3.I1.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S3.I1.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Modular Design</span
-                        >: Allows for components to be updated or replaced
-                        without overhauling the entire system.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S3.I1.i2"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S3.I1.i2.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Cross-Platform Compatibility</span
-                        >: Development using platforms that support multiple
-                        devices (e.g., Unity3D).
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S3.I1.i3"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S3.I1.i3.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Future-Proofing</span
-                        >: Designing with future technological advancements in
-                        mind.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <section id="S3.SS2" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">3.2 </span>Real-Time
-                Processing Challenges
-              </h3>
-
-              <div id="S3.SS2.p1" class="ltx_para">
-                <ul id="S3.I2" class="ltx_itemize">
-                  <li
-                    id="S3.I2.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S3.I2.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Data Throughput</span
-                        >: Ensuring the system can handle the data rates
-                        required for high-resolution video.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S3.I2.i2"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S3.I2.i2.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Synchronization</span
-                        >: Keeping all processing modules in sync to prevent
-                        visual artifacts.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S3.I2.i3"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S3.I2.i3.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Error Handling</span
-                        >: Robust methods to handle failures without disrupting
-                        the user experience.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <section id="S3.SS3" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">3.3 </span>Privacy and
-                Ethical Considerations
-              </h3>
-
-              <div id="S3.SS3.p1" class="ltx_para">
-                <ul id="S3.I3" class="ltx_itemize">
-                  <li
-                    id="S3.I3.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S3.I3.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Data Management</span
-                        >: Ensuring that facial data is not stored
-                        unnecessarily.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S3.I3.i2"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S3.I3.i2.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold">User Consent</span
-                        >: Informing participants about the data processing
-                        involved.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S3.I3.i3"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S3.I3.i3.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold">Compliance</span>:
-                        Adhering to data protection regulations (e.g., GDPR).
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </section>
-          <section id="S4" class="ltx_section">
-            <h2 class="ltx_title ltx_title_section">
-              <span class="ltx_tag ltx_tag_section">4 </span>Exhibit Setup
-              Considerations
-            </h2>
-
-            <section id="S4.SS1" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">4.1 </span>Participant
-                Experience Design
-              </h3>
-
-              <div id="S4.SS1.p1" class="ltx_para">
-                <ul id="S4.I1" class="ltx_itemize">
-                  <li
-                    id="S4.I1.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S4.I1.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Controlled Environment</span
-                        >: A designated area where lighting and background
-                        conditions are optimal.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S4.I1.i2"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S4.I1.i2.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold">Wearables</span>:
-                        Provision of uniform robes and headgear to minimize
-                        recognition based on non-facial features.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S4.I1.i3"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S4.I1.i3.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Rotation System</span
-                        >: Scheduling to ensure participants experience both
-                        known and unknown faces.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S4.I1.i4"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S4.I1.i4.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Data Gathering</span
-                        >: Data will be gathered to measure the participants’
-                        expriences using psychometrics such as
-                        <cite class="ltx_cite ltx_citemacro_cite"
-                          >[<a
-                            href="#bib.bib2"
-                            title="Holistic face training enhances face processing in developmental prosopagnosia"
-                            class="ltx_ref"
-                            >DCN14</a
-                          >]</cite
-                        >
-                        <cite class="ltx_cite ltx_citemacro_cite"
-                          >[<a
-                            href="#bib.bib3"
-                            title="The cambridge face memory test: results for neurologically intact individuals and an investigation of its validity using inverted face stimuli and prosopagnosic participants"
-                            class="ltx_ref"
-                            >DN06</a
-                          >]</cite
-                        >
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <section id="S4.SS2" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">4.2 </span>Hardware
-                Deployment
-              </h3>
-
-              <div id="S4.SS2.p1" class="ltx_para">
-                <ul id="S4.I2" class="ltx_itemize">
-                  <li
-                    id="S4.I2.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S4.I2.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold">AR Headsets</span>:
-                        Multiple units for simultaneous use by small groups.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S4.I2.i2"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S4.I2.i2.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold">Local Servers</span
-                        >: Positioned to minimize network latency, possibly
-                        within the exhibit space.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S4.I2.i3"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S4.I2.i3.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Networking Equipment</span
-                        >: High-performance routers and switches dedicated to
-                        the exhibit.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <section id="S4.SS3" class="ltx_subsection">
-              <h3 class="ltx_title ltx_title_subsection">
-                <span class="ltx_tag ltx_tag_subsection">4.3 </span>Support
-                Infrastructure
-              </h3>
-
-              <div id="S4.SS3.p1" class="ltx_para">
-                <ul id="S4.I3" class="ltx_itemize">
-                  <li
-                    id="S4.I3.i1"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S4.I3.i1.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Technical Staff</span
-                        >: On-site personnel to assist with equipment and
-                        troubleshoot issues.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S4.I3.i2"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S4.I3.i2.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Educational Materials</span
-                        >: Contextual placards or videos explaining the
-                        experience.
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    id="S4.I3.i3"
-                    class="ltx_item"
-                    style="list-style-type: none"
-                  >
-                    <span class="ltx_tag ltx_tag_item">•</span>
-                    <div id="S4.I3.i3.p1" class="ltx_para">
-                      <p class="ltx_p">
-                        <span class="ltx_text ltx_font_bold"
-                          >Feedback Mechanisms</span
-                        >: Tablets or kiosks for participants to complete
-                        surveys post-experience.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </section>
-          <section id="S5" class="ltx_section">
-            <h2 class="ltx_title ltx_title_section">
-              <span class="ltx_tag ltx_tag_section">5 </span>Conclusion
-            </h2>
-
-            <div id="S5.p1" class="ltx_para">
-              <p class="ltx_p">
-                The proposed software and hardware architecture leverages
-                cutting-edge technologies in computer vision, machine learning,
-                and augmented reality to create an immersive simulation of
-                prosopagnosia. By carefully balancing on-device processing with
-                potential server-side support, the system is designed to meet
-                the stringent latency requirements essential for a seamless user
-                experience. The modular design ensures scalability and
-                adaptability, allowing for future enhancements and the potential
-                incorporation of additional perceptual disorder simulations.
-              </p>
-            </div>
-            <div id="S5.p2" class="ltx_para">
-              <p class="ltx_p">
-                This architecture not only serves the immediate goals of the
-                project but also lays the groundwork for future research and
-                development in assistive AR technologies and educational tools
-                that foster empathy and understanding of perceptual diversity.
-              </p>
-            </div>
-          </section>
-          <section id="bib" class="ltx_bibliography">
-            <h2 class="ltx_title ltx_title_bibliography">References</h2>
-
-            <ul id="bib.L1" class="ltx_biblist">
-              <li id="bib.bib1" class="ltx_bibitem ltx_bib_article">
-                <span
-                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
-                  >[CT17]</span
-                >
-                <span class="ltx_bibblock"
-                  ><span class="ltx_text ltx_bib_author"
-                    >L. Chang and D. Y. Tsao</span
-                  ><span class="ltx_text ltx_bib_year"> (2017-09)</span>
-                </span>
-                <span class="ltx_bibblock"
-                  ><span class="ltx_text ltx_bib_title"
-                    >The code for facial identity in the primate brain</span
-                  >.
-                </span>
-                <span class="ltx_bibblock"
-                  ><span class="ltx_text ltx_bib_journal">Cell</span>
-                  <span class="ltx_text ltx_bib_volume">169</span> (<span
-                    class="ltx_text ltx_bib_number"
-                    >6</span
-                  >),
-                  <span class="ltx_text ltx_bib_pages"> pp. 1013–1028.e14</span
-                  >.
-                </span>
-                <span class="ltx_bibblock"
-                  >External Links:
-                  <span class="ltx_text ltx_bib_links"
-                    ><a
-                      href="https://dx.doi.org/10.1016/j.cell.2017.05.011"
-                      title=""
-                      class="ltx_ref doi ltx_bib_external"
-                      >Document</a
-                    >,
-                    <span class="ltx_text issn ltx_bib_external"
-                      >ISSN 0092-8674</span
-                    >,
-                    <a
-                      href="https://doi.org/10.1016/j.cell.2017.05.011"
-                      title=""
-                      class="ltx_ref ltx_bib_external"
-                      >Link</a
-                    ></span
-                  >
-                </span>
-                <span class="ltx_bibblock ltx_bib_cited"
-                  >Cited by:
-                  <a
-                    href="#S1.SS3.SSS2.p1"
-                    title="1.3.2 Face Representation and Modeling Module ‣ 1.3 Detailed Component Description ‣ 1 Software Architecture ‣ Software and Hardware Architecture Proposal for “Using Augmented Reality to Experience Prosopagnosia”"
-                    class="ltx_ref"
-                    ><span class="ltx_text ltx_ref_tag">§1.3.2</span></a
-                  >.
-                </span>
-              </li>
-              <li id="bib.bib2" class="ltx_bibitem ltx_bib_article">
-                <span
-                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
-                  >[DCN14]</span
-                >
-                <span class="ltx_bibblock"
-                  ><span class="ltx_text ltx_bib_author"
-                    >J. DeGutis, S. Cohan, and K. Nakayama</span
-                  ><span class="ltx_text ltx_bib_year"> (2014-03)</span>
-                </span>
-                <span class="ltx_bibblock"
-                  ><span class="ltx_text ltx_bib_title"
-                    >Holistic face training enhances face processing in
-                    developmental prosopagnosia</span
-                  >.
-                </span>
-                <span class="ltx_bibblock"
-                  ><span class="ltx_text ltx_bib_journal">Brain</span>
-                  <span class="ltx_text ltx_bib_volume">137</span> (<span
-                    class="ltx_text ltx_bib_number"
-                    >6</span
-                  >),
-                  <span class="ltx_text ltx_bib_pages"> pp. 1781–1798</span>.
-                </span>
-                <span class="ltx_bibblock"
-                  >External Links:
-                  <span class="ltx_text ltx_bib_links"
-                    ><span class="ltx_text issn ltx_bib_external"
-                      >ISSN 0006-8950</span
-                    >,
-                    <a
-                      href="https://dx.doi.org/10.1093/brain/awu062"
-                      title=""
-                      class="ltx_ref doi ltx_bib_external"
-                      >Document</a
-                    >,
-                    <a
-                      href="https://doi.org/10.1093/brain/awu062"
-                      title=""
-                      class="ltx_ref ltx_bib_external"
-                      >Link</a
-                    ></span
-                  >
-                </span>
-                <span class="ltx_bibblock ltx_bib_cited"
-                  >Cited by:
-                  <a
-                    href="#S4.I1.i4.p1"
-                    title="In 4.1 Participant Experience Design ‣ 4 Exhibit Setup Considerations ‣ Software and Hardware Architecture Proposal for “Using Augmented Reality to Experience Prosopagnosia”"
-                    class="ltx_ref"
-                    ><span class="ltx_text ltx_ref_tag">4th item</span></a
-                  >.
-                </span>
-              </li>
-              <li id="bib.bib3" class="ltx_bibitem ltx_bib_article">
-                <span
-                  class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem"
-                  >[DN06]</span
-                >
-                <span class="ltx_bibblock"
-                  ><span class="ltx_text ltx_bib_author"
-                    >B. Duchaine and K. Nakayama</span
-                  ><span class="ltx_text ltx_bib_year"> (2006)</span>
-                </span>
-                <span class="ltx_bibblock"
-                  ><span class="ltx_text ltx_bib_title"
-                    >The cambridge face memory test: results for neurologically
-                    intact individuals and an investigation of its validity
-                    using inverted face stimuli and prosopagnosic
-                    participants</span
-                  >.
-                </span>
-                <span class="ltx_bibblock"
-                  ><span class="ltx_text ltx_bib_journal"
-                    >Neuropsychologia</span
-                  >
-                  <span class="ltx_text ltx_bib_volume">44</span> (<span
-                    class="ltx_text ltx_bib_number"
-                    >4</span
-                  >), <span class="ltx_text ltx_bib_pages"> pp. 576–585</span>.
-                </span>
-                <span class="ltx_bibblock ltx_bib_cited"
-                  >Cited by:
-                  <a
-                    href="#S4.I1.i4.p1"
-                    title="In 4.1 Participant Experience Design ‣ 4 Exhibit Setup Considerations ‣ Software and Hardware Architecture Proposal for “Using Augmented Reality to Experience Prosopagnosia”"
-                    class="ltx_ref"
-                    ><span class="ltx_text ltx_ref_tag">4th item</span></a
-                  >.
-                </span>
-              </li>
-            </ul>
-          </section>
-        </article>
-      </div>
-      <footer class="ltx_page_footer">
-        <div class="ltx_page_logo">
-          Generated on Tue Jan 1 00:00:00 1980 by
-          <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"
-            ><span style="letter-spacing: -0.2em; margin-right: 0.1em"
-              >L<span
-                class="ltx_font_smallcaps"
-                style="position: relative; bottom: 2.2pt"
-                >a</span
-              >T<span
-                class="ltx_font_smallcaps"
-                style="font-size: 120%; position: relative; bottom: -0.2ex"
-                >e</span
-              ></span
-            ><span style="font-size: 90%; position: relative; bottom: -0.2ex"
-              >XML</span
-            ><img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg=="
-              alt="Mascot Sammy"
-          /></a>
-        </div>
-      </footer>
-    </div>
-  </body>
+</div>
+</body>
 </html>
