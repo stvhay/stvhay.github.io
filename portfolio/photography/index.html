@@ -2,7 +2,16 @@
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="theme-color" content="#f2efe9" />
+    <meta
+      name="theme-color"
+      content="#f2efe9"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#1f1f1f"
+      media="(prefers-color-scheme: dark)"
+    />
     <script src="/js/theme-init.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -76,20 +85,25 @@
           <h1>Photography</h1>
 
           <div class="article-img">
-            <img
-              src="/portfolio/photography/img_hu_53d703270311fb59.webp"
-              srcset="
-                /portfolio/photography/img_hu_e3dc37b90352ce7d.webp  320w,
-                /portfolio/photography/img_hu_53d703270311fb59.webp  640w,
-                /portfolio/photography/img_hu_ef46b64e14be552.webp   960w,
-                /portfolio/photography/img_hu_15a21358158d10bf.webp 1440w
-              "
-              sizes="(max-width: 768px) calc(100vw - 6.5rem), 400px"
-              alt=""
-              width="640"
-              height="427"
-              decoding="async"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  /portfolio/photography/img_hu_e3dc37b90352ce7d.webp  320w,
+                  /portfolio/photography/img_hu_53d703270311fb59.webp  640w,
+                  /portfolio/photography/img_hu_ef46b64e14be552.webp   960w,
+                  /portfolio/photography/img_hu_15a21358158d10bf.webp 1440w
+                "
+                sizes="(max-width: 768px) calc(100vw - 6.5rem), 400px"
+              />
+              <img
+                src="/portfolio/photography/img_hu_ad6bf6e40aeb4ad1.jpeg"
+                alt=""
+                width="640"
+                height="427"
+                decoding="async"
+              />
+            </picture>
           </div>
 
           <p>

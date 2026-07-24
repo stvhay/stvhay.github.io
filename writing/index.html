@@ -2,7 +2,16 @@
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="theme-color" content="#f2efe9" />
+    <meta
+      name="theme-color"
+      content="#f2efe9"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#1f1f1f"
+      media="(prefers-color-scheme: dark)"
+    />
     <script src="/js/theme-init.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -76,21 +85,26 @@
 
         <article class="post card">
           <div class="post-img">
-            <img
-              src="/writing/computational-neuroscience-meets-the-17th-century/img_hu_1ae6d051837de974.webp"
-              srcset="
-                /writing/computational-neuroscience-meets-the-17th-century/img_hu_c8102ae5294717ea.webp  320w,
-                /writing/computational-neuroscience-meets-the-17th-century/img_hu_1ae6d051837de974.webp  640w,
-                /writing/computational-neuroscience-meets-the-17th-century/img_hu_5aa2e66834456ca1.webp  960w,
-                /writing/computational-neuroscience-meets-the-17th-century/img_hu_54401d302fa3e90c.webp 1440w
-              "
-              sizes="(max-width: 768px) calc(100vw - 5rem), 150px"
-              alt=""
-              width="640"
-              height="860"
-              loading="lazy"
-              decoding="async"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  /writing/computational-neuroscience-meets-the-17th-century/img_hu_c8102ae5294717ea.webp  320w,
+                  /writing/computational-neuroscience-meets-the-17th-century/img_hu_1ae6d051837de974.webp  640w,
+                  /writing/computational-neuroscience-meets-the-17th-century/img_hu_5aa2e66834456ca1.webp  960w,
+                  /writing/computational-neuroscience-meets-the-17th-century/img_hu_54401d302fa3e90c.webp 1440w
+                "
+                sizes="(max-width: 768px) calc(100vw - 5rem), 150px"
+              />
+              <img
+                src="/writing/computational-neuroscience-meets-the-17th-century/img_hu_23a12c691871c1a0.jpg"
+                alt=""
+                width="640"
+                height="860"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </div>
 
           <div class="post-text">

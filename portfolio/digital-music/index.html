@@ -2,7 +2,16 @@
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="theme-color" content="#f2efe9" />
+    <meta
+      name="theme-color"
+      content="#f2efe9"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#1f1f1f"
+      media="(prefers-color-scheme: dark)"
+    />
     <script src="/js/theme-init.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -79,20 +88,25 @@
           <h1>Digital Music</h1>
 
           <div class="article-img">
-            <img
-              src="/portfolio/digital-music/img_hu_31965e25a97bec7.webp"
-              srcset="
-                /portfolio/digital-music/img_hu_996596e11c0323ae.webp  320w,
-                /portfolio/digital-music/img_hu_31965e25a97bec7.webp   640w,
-                /portfolio/digital-music/img_hu_b832eab49830eef.webp   960w,
-                /portfolio/digital-music/img_hu_335b1b36ae9f5e48.webp 1024w
-              "
-              sizes="(max-width: 768px) calc(100vw - 6.5rem), 400px"
-              alt=""
-              width="640"
-              height="640"
-              decoding="async"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  /portfolio/digital-music/img_hu_996596e11c0323ae.webp  320w,
+                  /portfolio/digital-music/img_hu_31965e25a97bec7.webp   640w,
+                  /portfolio/digital-music/img_hu_b832eab49830eef.webp   960w,
+                  /portfolio/digital-music/img_hu_335b1b36ae9f5e48.webp 1024w
+                "
+                sizes="(max-width: 768px) calc(100vw - 6.5rem), 400px"
+              />
+              <img
+                src="/portfolio/digital-music/img_hu_8ba67e32daf15cf9.jpeg"
+                alt=""
+                width="640"
+                height="640"
+                decoding="async"
+              />
+            </picture>
           </div>
 
           <h2 id="scream-tracker-3-music-16-bit8-channel">

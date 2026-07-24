@@ -2,7 +2,16 @@
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="theme-color" content="#f2efe9" />
+    <meta
+      name="theme-color"
+      content="#f2efe9"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#1f1f1f"
+      media="(prefers-color-scheme: dark)"
+    />
     <script src="/js/theme-init.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -82,20 +91,25 @@ adapted for personal use."
           <h1>Various Coding Pursuits</h1>
 
           <div class="article-img">
-            <img
-              src="/portfolio/various-coding-pursuits/img_hu_233b881b548b1dec.webp"
-              srcset="
-                /portfolio/various-coding-pursuits/img_hu_fd2984814f324b8c.webp  320w,
-                /portfolio/various-coding-pursuits/img_hu_233b881b548b1dec.webp  640w,
-                /portfolio/various-coding-pursuits/img_hu_dad784f9b2f2c95b.webp  960w,
-                /portfolio/various-coding-pursuits/img_hu_aa0303f23e7238c5.webp 1024w
-              "
-              sizes="(max-width: 768px) calc(100vw - 6.5rem), 400px"
-              alt=""
-              width="640"
-              height="640"
-              decoding="async"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  /portfolio/various-coding-pursuits/img_hu_fd2984814f324b8c.webp  320w,
+                  /portfolio/various-coding-pursuits/img_hu_233b881b548b1dec.webp  640w,
+                  /portfolio/various-coding-pursuits/img_hu_dad784f9b2f2c95b.webp  960w,
+                  /portfolio/various-coding-pursuits/img_hu_aa0303f23e7238c5.webp 1024w
+                "
+                sizes="(max-width: 768px) calc(100vw - 6.5rem), 400px"
+              />
+              <img
+                src="/portfolio/various-coding-pursuits/img_hu_d757e7ab2ae5f08e.jpeg"
+                alt=""
+                width="640"
+                height="640"
+                decoding="async"
+              />
+            </picture>
           </div>
 
           <p>

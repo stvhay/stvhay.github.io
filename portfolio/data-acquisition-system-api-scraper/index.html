@@ -2,7 +2,16 @@
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="theme-color" content="#f2efe9" />
+    <meta
+      name="theme-color"
+      content="#f2efe9"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#1f1f1f"
+      media="(prefers-color-scheme: dark)"
+    />
     <script src="/js/theme-init.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -85,20 +94,25 @@
           <h1>Data Acquisition System API Scraper</h1>
 
           <div class="article-img">
-            <img
-              src="/portfolio/data-acquisition-system-api-scraper/img_hu_7fd2a421e5148ad2.webp"
-              srcset="
-                /portfolio/data-acquisition-system-api-scraper/img_hu_6f2033d6588cbb32.webp  320w,
-                /portfolio/data-acquisition-system-api-scraper/img_hu_7fd2a421e5148ad2.webp  640w,
-                /portfolio/data-acquisition-system-api-scraper/img_hu_a4a5b80b84cca128.webp  960w,
-                /portfolio/data-acquisition-system-api-scraper/img_hu_cbbf6f4f3e6f0a6f.webp 1024w
-              "
-              sizes="(max-width: 768px) calc(100vw - 6.5rem), 400px"
-              alt=""
-              width="640"
-              height="640"
-              decoding="async"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  /portfolio/data-acquisition-system-api-scraper/img_hu_6f2033d6588cbb32.webp  320w,
+                  /portfolio/data-acquisition-system-api-scraper/img_hu_7fd2a421e5148ad2.webp  640w,
+                  /portfolio/data-acquisition-system-api-scraper/img_hu_a4a5b80b84cca128.webp  960w,
+                  /portfolio/data-acquisition-system-api-scraper/img_hu_cbbf6f4f3e6f0a6f.webp 1024w
+                "
+                sizes="(max-width: 768px) calc(100vw - 6.5rem), 400px"
+              />
+              <img
+                src="/portfolio/data-acquisition-system-api-scraper/img_hu_94bfd0269d5a85f7.jpeg"
+                alt=""
+                width="640"
+                height="640"
+                decoding="async"
+              />
+            </picture>
           </div>
 
           <p>

@@ -2,7 +2,16 @@
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="theme-color" content="#f2efe9" />
+    <meta
+      name="theme-color"
+      content="#f2efe9"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#1f1f1f"
+      media="(prefers-color-scheme: dark)"
+    />
     <script src="/js/theme-init.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -79,17 +88,22 @@
           <h1>Batocera Linux</h1>
 
           <div class="article-img">
-            <img
-              src="/portfolio/batocera-linux/img_hu_65d1b82f0633a671.webp"
-              srcset="
-                /portfolio/batocera-linux/img_hu_65d1b82f0633a671.webp 300w
-              "
-              sizes="(max-width: 768px) calc(100vw - 6.5rem), 400px"
-              alt=""
-              width="300"
-              height="271"
-              decoding="async"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  /portfolio/batocera-linux/img_hu_65d1b82f0633a671.webp 300w
+                "
+                sizes="(max-width: 768px) calc(100vw - 6.5rem), 400px"
+              />
+              <img
+                src="/portfolio/batocera-linux/img_hu_7a0d2a49945ea71d.jpeg"
+                alt=""
+                width="300"
+                height="271"
+                decoding="async"
+              />
+            </picture>
           </div>
 
           <p>

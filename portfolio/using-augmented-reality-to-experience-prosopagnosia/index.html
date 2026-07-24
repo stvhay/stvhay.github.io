@@ -2,7 +2,16 @@
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="theme-color" content="#f2efe9" />
+    <meta
+      name="theme-color"
+      content="#f2efe9"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#1f1f1f"
+      media="(prefers-color-scheme: dark)"
+    />
     <script src="/js/theme-init.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -87,20 +96,25 @@
           <h1>Using Augmented Reality to Experience Prosopagnosia</h1>
 
           <div class="article-img">
-            <img
-              src="/portfolio/using-augmented-reality-to-experience-prosopagnosia/img_hu_b4a25ec4fd0f2661.webp"
-              srcset="
-                /portfolio/using-augmented-reality-to-experience-prosopagnosia/img_hu_10cf16ab3e53a7bb.webp  320w,
-                /portfolio/using-augmented-reality-to-experience-prosopagnosia/img_hu_b4a25ec4fd0f2661.webp  640w,
-                /portfolio/using-augmented-reality-to-experience-prosopagnosia/img_hu_4686739c1fb9fde7.webp  960w,
-                /portfolio/using-augmented-reality-to-experience-prosopagnosia/img_hu_b794942e433cd98b.webp 1024w
-              "
-              sizes="(max-width: 768px) calc(100vw - 6.5rem), 400px"
-              alt=""
-              width="640"
-              height="640"
-              decoding="async"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  /portfolio/using-augmented-reality-to-experience-prosopagnosia/img_hu_10cf16ab3e53a7bb.webp  320w,
+                  /portfolio/using-augmented-reality-to-experience-prosopagnosia/img_hu_b4a25ec4fd0f2661.webp  640w,
+                  /portfolio/using-augmented-reality-to-experience-prosopagnosia/img_hu_4686739c1fb9fde7.webp  960w,
+                  /portfolio/using-augmented-reality-to-experience-prosopagnosia/img_hu_b794942e433cd98b.webp 1024w
+                "
+                sizes="(max-width: 768px) calc(100vw - 6.5rem), 400px"
+              />
+              <img
+                src="/portfolio/using-augmented-reality-to-experience-prosopagnosia/img_hu_5742ed7437b84c5f.jpg"
+                alt=""
+                width="640"
+                height="640"
+                decoding="async"
+              />
+            </picture>
           </div>
 
           <p>
