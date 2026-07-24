@@ -58,8 +58,8 @@
     <title>Steven Hay</title>
     <link
       rel="stylesheet"
-      href="/css/main.min.a53378bb4e490c88280b39f305cb1e2cec2752f40f260844c2fe858260105d2c.css"
-      integrity="sha256-pTN4u05JDIgoCznzBcseLOwnUvQPJghEwv6FgmAQXSw="
+      href="/css/main.min.b636d95a244f5425e0e28f15dc5cd83dcd5e07a8d67e11db4558d4cd88a8181c.css"
+      integrity="sha256-tjbZWiRPVCXg4o8V3FzYPc1eB6jWfhHbRVjUzYioGBw="
       crossorigin="anonymous"
     />
     <script type="application/ld+json">
@@ -89,13 +89,13 @@
         href="/docs/cv/cv-steve-hay.pdf"
         rel="noopener noreferrer"
         target="_blank"
-        >CV</a
+        >CV<span class="sr-only"> (PDF, opens in a new tab)</span></a
       >
       <a href="/contact/">Contact</a>
     </nav>
     <main id="main-content" tabindex="-1">
-      <section id="home" class="container">
-        <h1>Welcome</h1>
+      <section id="home" class="container home-intro">
+        <h1>Engineer learning neuroscience</h1>
         <p>I&rsquo;m Steve, an engineer learning neuroscience.</p>
         <p>
           After twenty years working on complex systems—nuclear reactors,
@@ -108,8 +108,14 @@
           through ideas in public.
         </p>
       </section>
-      <section id="portfolio" class="container">
-        <article class="post card">
+      <section
+        id="portfolio"
+        class="container"
+        aria-labelledby="portfolio-heading"
+      >
+        <h2 id="portfolio-heading">Portfolio</h2>
+
+        <article class="post card featured-project">
           <div class="post-img">
             <picture>
               <source
@@ -120,7 +126,7 @@
                   /portfolio/using-augmented-reality-to-experience-prosopagnosia/img_hu_4686739c1fb9fde7.webp  960w,
                   /portfolio/using-augmented-reality-to-experience-prosopagnosia/img_hu_b794942e433cd98b.webp 1024w
                 "
-                sizes="(max-width: 768px) calc(100vw - 5rem), 150px"
+                sizes="(max-width: 768px) calc(100vw - 5rem), 240px"
               />
               <img
                 src="/portfolio/using-augmented-reality-to-experience-prosopagnosia/img_hu_5742ed7437b84c5f.jpg"
@@ -134,17 +140,17 @@
           </div>
 
           <div class="post-text">
-            <h2>
+            <span class="featured-label">Featured project</span>
+            <h3 class="post-title">
               <a
                 href="/portfolio/using-augmented-reality-to-experience-prosopagnosia/"
                 >Using Augmented Reality to Experience Prosopagnosia</a
               >
-            </h2>
+            </h3>
             <p>
               AR system simulating face blindness by distorting facial features
               in real-time, based on neuroscience research on face perception.
             </p>
-            <span class="section-mark">(portfolio)</span>
           </div>
         </article>
 
@@ -173,7 +179,9 @@
           </div>
 
           <div class="post-text">
-            <h2><a href="/portfolio/photography/">Photography</a></h2>
+            <h3 class="post-title">
+              <a href="/portfolio/photography/">Photography</a>
+            </h3>
             <p>
               I&rsquo;ve taken various photographs over the years, some
               published for the Washington Post, Washington City Paper, and
@@ -184,7 +192,6 @@
                 >gallery</a
               >)
             </p>
-            <span class="section-mark">(portfolio)</span>
           </div>
         </article>
 
@@ -213,12 +220,13 @@
           </div>
 
           <div class="post-text">
-            <h2><a href="/portfolio/digital-music/">Digital Music</a></h2>
+            <h3 class="post-title">
+              <a href="/portfolio/digital-music/">Digital Music</a>
+            </h3>
             <p>
               16-bit Scream Tracker 3 music compositions created for PC demos,
               playable in emulated hardware.
             </p>
-            <span class="section-mark">(portfolio)</span>
           </div>
         </article>
 
@@ -244,12 +252,13 @@
           </div>
 
           <div class="post-text">
-            <h2><a href="/portfolio/batocera-linux/">Batocera Linux</a></h2>
+            <h3 class="post-title">
+              <a href="/portfolio/batocera-linux/">Batocera Linux</a>
+            </h3>
             <p>
               Linux kernel and embedded systems work for retrogaming platform,
               focusing on ARM boards with RK3588 chipsets.
             </p>
-            <span class="section-mark">(portfolio)</span>
           </div>
         </article>
 
@@ -278,16 +287,15 @@
           </div>
 
           <div class="post-text">
-            <h2>
+            <h3 class="post-title">
               <a href="/portfolio/javascript-psychometric-quiz-template/"
                 >Javascript Psychometric Quiz Template</a
               >
-            </h2>
+            </h3>
             <p>
               Browser-based quiz template for multi-dimensional psychometric
               tests with scoring and criteria validation.
             </p>
-            <span class="section-mark">(portfolio)</span>
           </div>
         </article>
 
@@ -316,14 +324,13 @@
           </div>
 
           <div class="post-text">
-            <h2>
+            <h3 class="post-title">
               <a href="/portfolio/mac-address-scanner/">MAC Address Scanner</a>
-            </h2>
+            </h3>
             <p>
               Network utility using FastAPI and ZeroMQ to identify devices on a
               subnet by collecting and categorizing MAC addresses.
             </p>
-            <span class="section-mark">(portfolio)</span>
           </div>
         </article>
 
@@ -352,16 +359,15 @@
           </div>
 
           <div class="post-text">
-            <h2>
+            <h3 class="post-title">
               <a href="/portfolio/data-acquisition-system-api-scraper/"
                 >Data Acquisition System API Scraper</a
               >
-            </h2>
+            </h3>
             <p>
               Python interface for collecting data from Radix IOT Mango to
               create operational reports and analytics pipelines.
             </p>
-            <span class="section-mark">(portfolio)</span>
           </div>
         </article>
 
@@ -388,12 +394,13 @@
           </div>
 
           <div class="post-text">
-            <h2><a href="/portfolio/nonesible/">Nonesible</a></h2>
+            <h3 class="post-title">
+              <a href="/portfolio/nonesible/">Nonesible</a>
+            </h3>
             <p>
               Sometimes you need to give a simple explanation of Ansible to a
               person who loves using shell scripts.
             </p>
-            <span class="section-mark">(portfolio)</span>
           </div>
         </article>
 
@@ -422,16 +429,15 @@
           </div>
 
           <div class="post-text">
-            <h2>
+            <h3 class="post-title">
               <a href="/portfolio/various-coding-pursuits/"
                 >Various Coding Pursuits</a
               >
-            </h2>
+            </h3>
             <p>
               A relatively unorganized set of public code snippets and other
               tools I&rsquo;ve adapted for personal use.
             </p>
-            <span class="section-mark">(portfolio)</span>
           </div>
         </article>
       </section>
